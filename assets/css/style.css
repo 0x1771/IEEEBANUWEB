@@ -1883,23 +1883,23 @@ blockquote.blockquote-style-1:before {
 /*****************************
   Case Studies
 *****************************/
-.case-studies-wrapper.case-studies-style-1 {
+.ieeeprojects-wrapper.ieeeprojects-style-1 {
   position: relative;
   overflow: hidden;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-img {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-img {
   overflow: hidden;
   margin-bottom: 0;
   border-radius: 20px;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-img img {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-img img {
   transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-img .category {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-img .category {
   color: #ffffff;
   position: absolute;
   top: 30px;
@@ -1908,7 +1908,7 @@ blockquote.blockquote-style-1:before {
   border-radius: 80%;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-img .category:before {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-img .category:before {
   content: "";
   position: absolute;
   right: -5px;
@@ -1921,7 +1921,7 @@ blockquote.blockquote-style-1:before {
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-img .category:after {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-img .category:after {
   content: "";
   position: absolute;
   left: -5px;
@@ -1934,7 +1934,7 @@ blockquote.blockquote-style-1:before {
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-info {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-info {
   position: absolute;
   left: 0;
   right: 0;
@@ -1950,7 +1950,7 @@ blockquote.blockquote-style-1:before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 80%);
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-info:before {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-info:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1968,27 +1968,27 @@ blockquote.blockquote-style-1:before {
   background: linear-gradient(180deg, rgba(0, 56, 255, 0) 40%, rgba(0, 56, 255, 0.5) 80%);
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-info-inner {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-info-inner {
   position: relative;
   z-index: 1;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-info-inner .case-studies-title {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-info-inner .ieeeprojects-title {
   margin-bottom: -30px;
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-info-inner .case-studies-title a {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-info-inner .ieeeprojects-title a {
   display: table;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-content {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-content {
   margin-bottom: -30px;
   opacity: 0;
   transition: all 0.4s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-description {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-description {
   text-overflow: ellipsis;
   overflow: hidden;
   margin-bottom: 20px;
@@ -1997,74 +1997,74 @@ blockquote.blockquote-style-1:before {
   -webkit-box-orient: vertical;
 }
 
-.case-studies-wrapper.case-studies-style-1 .case-studies-description {
+.ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-description {
   color: #ffffff;
 }
 
-.case-studies-wrapper.case-studies-style-1:hover .case-studies-img img {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover .ieeeprojects-img img {
   transform: scale(1.1);
 }
 
-.case-studies-wrapper.case-studies-style-1:hover .case-studies-info:before {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover .ieeeprojects-info:before {
   opacity: 1;
 }
 
-.case-studies-wrapper.case-studies-style-1:hover .case-studies-title a {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover .ieeeprojects-title a {
   color: #ffffff;
 }
 
-.case-studies-wrapper.case-studies-style-1:hover .case-studies-content {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover .ieeeprojects-content {
   margin-bottom: 5px;
   opacity: 1;
 }
 
-.case-studies-wrapper.case-studies-style-1:hover .case-studies-title {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover .ieeeprojects-title {
   margin-bottom: 20px;
 }
 
-.case-studies-wrapper.case-studies-style-1:hover a.category {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover a.category {
   color: #77BEFF;
 }
 
-.case-studies-wrapper.case-studies-style-1:hover a.category:before {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover a.category:before {
   border: 1px solid #3663D8;
 }
 
-.case-studies-wrapper.case-studies-style-1:hover a.category:after {
+.ieeeprojects-wrapper.ieeeprojects-style-1:hover a.category:after {
   border: 1px solid #3663D8;
 }
 
 /* Case Studies Style-2 */
-.case-studies-wrapper.case-studies-style-2 .case-studies-item {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item {
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item .item-inner {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .item-inner {
   display: flex;
   gap: 50px;
   padding: 40px 0;
   align-items: center;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item .case-studies-title {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .ieeeprojects-title {
   width: 30%;
   margin: 0;
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item .case-studies-description {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .ieeeprojects-description {
   width: 35%;
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item .case-studies-action {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .ieeeprojects-action {
   margin-left: auto;
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item .gsap-img-animation {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .gsap-img-animation {
   position: fixed;
   top: 0;
   left: 0;
@@ -2080,7 +2080,7 @@ blockquote.blockquote-style-1:before {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item .marquee-wrapper {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .marquee-wrapper {
   display: flex;
   position: absolute;
   left: 0;
@@ -2092,21 +2092,21 @@ blockquote.blockquote-style-1:before {
   transition: all 0.3s ease-in-out;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item:hover {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item:hover {
   border-bottom-color: #77BEFF;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item:hover .item-inner .case-studies-title,
-.case-studies-wrapper.case-studies-style-2 .case-studies-item:hover .item-inner .case-studies-description {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item:hover .item-inner .ieeeprojects-title,
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item:hover .item-inner .ieeeprojects-description {
   opacity: 0;
   pointer-events: none;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item:hover .case-studies-action {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item:hover .ieeeprojects-action {
   z-index: 8;
 }
 
-.case-studies-wrapper.case-studies-style-2 .case-studies-item:hover .marquee-wrapper {
+.ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item:hover .marquee-wrapper {
   opacity: 1;
   pointer-events: auto;
 }
@@ -2158,7 +2158,7 @@ blockquote.blockquote-style-1:before {
 /* Responsive CSS */
 /*------------------------------------*/
 @media (max-width: 992px) {
-  .case-studies-wrapper.case-studies-style-2 .case-studies-item .item-inner {
+  .ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .item-inner {
     gap: 60px;
   }
 }
@@ -2167,15 +2167,15 @@ blockquote.blockquote-style-1:before {
   .case-info-section .case-info ul {
     grid-template-columns: repeat(3, 1fr);
   }
-  .case-studies-wrapper.case-studies-style-2 .case-studies-item .item-inner {
+  .ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .item-inner {
     flex-direction: column;
     gap: 15px;
     align-items: normal;
   }
-  .case-studies-wrapper.case-studies-style-2 .case-studies-item .case-studies-action {
+  .ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .ieeeprojects-action {
     margin-left: 0;
   }
-  .case-studies-wrapper.case-studies-style-2 .case-studies-item .gsap-img-animation {
+  .ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .gsap-img-animation {
     position: absolute;
     left: auto;
     right: 0;
@@ -2186,7 +2186,7 @@ blockquote.blockquote-style-1:before {
     transform: inherit !important;
     z-index: -1;
   }
-  .case-studies-wrapper.case-studies-style-2 .case-studies-item .case-studies-description {
+  .ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .ieeeprojects-description {
     width: 50%;
   }
 }
@@ -2195,7 +2195,7 @@ blockquote.blockquote-style-1:before {
   .case-info-section .case-info ul {
     grid-template-columns: repeat(2, 1fr);
   }
-  .case-studies-wrapper.case-studies-style-2 .case-studies-item .case-studies-description {
+  .ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .ieeeprojects-description {
     width: 80%;
   }
 }
@@ -2204,7 +2204,7 @@ blockquote.blockquote-style-1:before {
   .case-info-section .case-info ul {
     grid-template-columns: repeat(1, 1fr);
   }
-  .case-studies-wrapper.case-studies-style-2 .case-studies-item .case-studies-description {
+  .ieeeprojects-wrapper.ieeeprojects-style-2 .ieeeprojects-item .ieeeprojects-description {
     width: 100%;
   }
 }
