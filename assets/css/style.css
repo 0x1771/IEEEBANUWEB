@@ -3112,7 +3112,6 @@ form.form-dark .form-control:focus {
 .header-default.header-absolute {
   position: absolute;
   left: 0;
-  background: transparent;
 }
 
 .header-default .header-inner {
