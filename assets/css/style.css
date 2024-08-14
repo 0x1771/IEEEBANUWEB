@@ -2626,7 +2626,7 @@ div[cursor-type="arrow"] .owl-carousel,
   align-self: center;
   line-height: normal;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  -webkit-text-stroke: 1px rgba(89, 149, 240, 0.685);
 }
 
 .history-wrapper .history-info .history-content p {
