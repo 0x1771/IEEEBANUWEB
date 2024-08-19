@@ -42,6 +42,28 @@
         color: #00629B;
       }
 
+      .contact_card {
+        background-color: #00629b57;
+        border-radius: 3px;
+        padding: 5px;
+        margin: 20px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .contact_card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px #00629B;
+      }
+
+      .contact_card img {
+        transition: transform 0.3s ease;
+      }
+
+      .contact_card:hover img {
+        transform: rotate(10deg);
+      }
+
+
     </style>
 
   </head>
@@ -103,38 +125,51 @@
               </div>
         </div>
 
-      <div class="row" style="margin-top:50px; justify-content: center;">
-        <div class="col-lg-4 col-sm-12">
-        <div class="card contact_card">   
-          <div class="card-body" style="text-align: center; padding-top:30px;">
-                <i class="icon" style="display: block; margin-bottom: 20px;">
-                  <img class="img-fluid" src="assets/images/icons/location-icon.png" style="width: 40px; height: 40px;"/></i> <!--icon-->
-                <h4 style="color:white;">Bandırma Onyedi Eylül Üniversitesi</h4>
-                <p class="card-text" style="color:white;">Yeni Mahalle Şehit Astsubay Mustafa Soner Varlık Caddesi No:77, 10250 Bandırma/Balıkesir</p>
+        <div class="row" style="margin-top:50px; justify-content: center;">
+          <div class="col-lg-4 col-sm-12">
+              <div class="card contact_card">   
+                  <div class="card-body" style="text-align: center; padding-top:30px;">
+                      <i class="icon" style="display: block; margin-bottom: 20px;">
+                          <img class="img-fluid" src="assets/images/icons/location-icon.png" style="width: 40px; height: 40px;"/>
+                      </i> <!--icon-->
+                      <h4 style="color:white;">Bandırma Onyedi Eylül Üniversitesi</h4>
+                      <p class="card-text" style="color:white;">
+                          Yeni Mahalle Şehit Astsubay Mustafa Soner Varlık Caddesi No:77, 10250 Bandırma/Balıkesir
+                      </p>
+                  </div>
+              </div>
           </div>
-        </div>
-        </div>
-        <div class="col-lg-4 col-sm-12">
-        <div class="card contact_card"> 
-          <div class="card-body" style="text-align: center; padding-top:30px;">
-                <i class="icon" style="display: block; margin-bottom: 20px;">
-                  <img class="img-fluid" src="assets/images/icons/whatsapp-icon.png" style="width: 40px; height: 40px;"/></i> <!--icon-->
-                <h4 style="color:white;">WhatsApp Grubumuz</h4> 
-                <a href="https://chat.whatsapp.com/DXe7O92qIL6D60JkAvfXb3" style="color:white; text-decoration: underline;" target="_blank"><p>Tıkla Katıl!</p></a>
+          <div class="col-lg-4 col-sm-12">
+            <a href="https://chat.whatsapp.com/DXe7O92qIL6D60JkAvfXb3" target="_blank">
+              <div class="card contact_card"> 
+                  <div class="card-body" style="text-align: center; padding-top:30px;">
+                      <i class="icon" style="display: block; margin-bottom: 20px;">
+                          <img class="img-fluid" src="assets/images/icons/whatsapp-icon.png" style="width: 40px; height: 40px;"/>
+                      </i> <!--icon-->
+                      <h4 style="color:white;">Whatsapp Grubumuz</h4>
+                      <p class="card-text" style="color:white;">
+                          Tıkla Katıl!
+                      </p>
+                  </div>
+              </div>
+            </a>
           </div>
-        </div>
-        </div>
+          
         <div class="col-lg-4 col-sm-12">
-        <div class="card contact_card"> 
-          <div class="card-body" style="text-align: center; padding-top:30px;">
-                <i class="icon" style="display: block; margin-bottom: 20px;">
-                  <img class="img-fluid" src="assets/images/svg/address-info-email.svg" style="width: 40px; height: 40px;"/></i> <!--icon-->
-                <h4 style="color:white;">E-Posta Adresimiz</h4>
-                <p class="card-text" style="color:white; margin-bottom:05px;">destek@ieeebanu.com</p> 
-          </div>
+            <div class="card contact_card"> 
+                <div class="card-body" style="text-align: center; padding-top:30px;">
+                    <i class="icon" style="display: block; margin-bottom: 20px;">
+                        <img class="img-fluid" src="assets/images/svg/address-info-email.svg" style="width: 40px; height: 40px;"/>
+                    </i> <!--icon-->
+                    <h4 style="color:white;">İletişim</h4>
+                    <p class="card-text" style="color:white;">
+                        destek@ieeebanu.com
+                    </p>
+                </div>
+            </div>
         </div>
-        </div>
-      </div> 
+      </div>
+      
       
       <footer class="site-footer footer-dark">
         <div class="footer-copyright">
