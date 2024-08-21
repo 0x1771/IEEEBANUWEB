@@ -5400,3 +5400,72 @@ height: 50px;
 .img-services-scale {
   height: 90px;
 }
+
+  /*-----------------------*/
+  /* Extra Contact */
+  /*-----------------------*/
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  background-color: black;
+  border-style: solid;
+  border-color: #00629B;
+  color: #00629B;
+}
+
+.contact_card {
+  background-color: #00629b57;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px #00629B;
+}
+
+.contact_card img {
+  transition: transform 0.3s ease;
+}
+
+.contact_card:hover img {
+  transform: rotate(10deg);
+}
+
+.contact-form {
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #00629B;
+  border-radius: 3px;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.contact-form button {
+  background-color: #00629B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #004a75;
+}
