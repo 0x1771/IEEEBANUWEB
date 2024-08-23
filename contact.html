@@ -86,9 +86,17 @@
                 </div>
             </div>
         </div>
-
-        <div class="row" style="margin-top:50px; justify-content: center;">
+        <div class="row" style="margin-top:50px; justify-content: center; text-align: center;">
+            <div class="section-title pb-0 pb-lg-4">
+                <span class="sub-title" style="justify-content: center;"><img class="img-fluid" src="assets/images/subtitle-icon.png"
+                        alt="ikon"> İLETİŞİM</span>
+                <h4 class="about"> Alttaki kutularda yazan bilgilerle bizle iletişime geçebilir, <br> 
+                       bize destek olabilir, görüş ve şikayetlerinizi iletebilirsiniz. </h2>
+            </div>
+        </div>
+        <div class="row" style="margin-top:1px; justify-content: center;">
             <div class="col-lg-4 col-sm-12">
+                
                 <div class="card contact_card">
                     <div class="card-body" style="text-align: center; padding-top:30px;">
                         <i class="icon" style="display: block; margin-bottom: 20px;">
@@ -132,53 +140,74 @@
             </div>
         </div>
 
-        <div class="row" style="justify-content: center; margin-top: 20px;">
-            <div class="col-lg-8 col-sm-12">
-                <div class="contact-form">
-                    <form action="#" method="post">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="firstname" placeholder="Adınız" required>
+        <div class="row" style="justify-content: center; margin-top: 50px;">
+            <div class="col-lg-8 col-sm-12" style="display: flex; align-items: flex-start;">
+                <!-- Başlık Bölümü -->
+                <div class="section-title pb-0 pb-lg-4" style="flex: 1; text-align: left; padding-right: 20px; margin-top: 0;">
+                    <span class="sub-title" style="display: flex; align-items: center;">
+                        <img class="img-fluid" src="assets/images/subtitle-icon.png" alt="ikon" style="margin-right: 10px;"> 
+                        İLETİŞİME GEÇ
+                    </span>
+                    <h3 class="about" style="margin-top: 10px;">Formu Doldurarak Bizimle<br>İletişime Geçebilirsiniz.</h3>
+                </div>
+        
+                <!-- Form Bölümü -->
+                <div class="contact-form" style="flex: 1; background-color: black; padding: 20px; border-radius: 8px; margin-top: 0;">
+                    <form action="#" method="post" style="margin-top: 0;">
+                        <div class="row" style="margin-bottom: 20px;">
+                            <div class="col-md-4">
+                                <input type="text" name="firstname" placeholder="İsim" required style="width: 100%; padding: 15px; font-size: 18px; background-color: black; color: white; border: 1px solid rgba(255, 255, 255, 0.404); border-radius: 1px;">
                             </div>
-                            <div class="col-md-6">
-                                <input type="text" name="lastname" placeholder="Soyadınız" required>
+                            <div class="col-md-4">
+                                <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 15px; font-size: 18px; background-color: black; color: white; border: 1px solid rgba(255, 255, 255, 0.404); border-radius: 1px;">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="tel" name="phone" placeholder="Telefon" required style="width: 100%; padding: 15px; font-size: 18px; background-color: black; color: white; border: 1px solid rgba(255, 255, 255, 0.404); border-radius: 1px;">
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="margin-bottom: 20px;">
                             <div class="col-md-12">
-                                <input type="tel" name="phone" placeholder="Telefon Numaranız" required>
+                                <textarea name="message" rows="5" placeholder="Mesaj" required style="width: 100%; padding: 15px; font-size: 18px; background-color: black; color: white; border: 1px solid rgba(255, 255, 255, 0.404); border-radius: 1px;"></textarea>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <textarea name="message" rows="5" placeholder="Mesajınız" required></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <button type="submit">Gönder</button>
+                            <div class="col-md-12" style="position: relative; height: 140px;">
+                                <a class="btn btn-effect" href="#">
+                                    <span>Mesaj Gönder</span>
+                                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_59_253)">
+                                            <path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/>
+                                            <path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_59_253">
+                                                <rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    
+        
+        
+        
+        
 
-    <footer class="site-footer footer-dark">
-      <div class="footer-copyright">
-        <div class="container">
-         <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <p><a class="footer-logo" href="index.html"><img class="img-fluid" src="assets/images/ieee-blue.png" alt="logo" /></a></p>
+
+        <footer class="site-footer footer-dark">
+            <div class="footer-copyright">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-lg-6"><p><a class="footer-logo" href="index.html"><img class="img-fluid" src="assets/images/ieee-blue.png" alt="logo" /></a></p></div>
+                  <div class="col-lg-6 text-lg-end"><p>IEEE BANU adına 2024 yılında geliştirilmiştir.</a></p></div>
                 </div>
-                <div class="col-lg-6 text-lg-end">
-                   <p>IEEE BANU adına 2024 yılında geliştirilmiştir.</a></p>
-                </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+              </div>
+            </div>
+          </footer>
 
     <div class="back-to-top">
       <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
