@@ -3168,7 +3168,7 @@ body {
   .header-default .site-menu .main-menu .nav-item.active > a:before,
   .header-default .site-menu .main-menu .nav-item:hover > a:before {
     content: "";
-    background-image: url(../assets/images/menu-hover.png);
+    background-image: url(../assets/images/menu-hover.webp);
     height: 8px;
     position: absolute;
     bottom: 0;
@@ -3268,7 +3268,7 @@ body {
     bottom: 0;
     opacity: 0.05;
     z-index: -1;
-    background-image: url("../assets/images/bg/overlay-bg.png");
+    background-image: url("../assets/images/bg/overlay-bg.webp");
     background-size: cover;
   }
   
@@ -4377,14 +4377,14 @@ body {
   /* Ellipse Shep */
   /*------------------------------*/
   .ellipse-top {
-    background-image: url("../assets/images/bg/ellipse-top.png");
+    background-image: url("../assets/images/bg/ellipse-top.webp");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: auto;
   }
   
   .ellipse-bottom {
-    background-image: url("../assets/images/bg/ellipse-bottom.png");
+    background-image: url("../assets/images/bg/ellipse-bottom.webp");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: auto;
