@@ -5415,11 +5415,12 @@ body {
     border-style: solid;
     border-color: #00629B;
     color: #00629B;
+    border-radius: 20px;
   }
   
   .contact_card {
     background-color: #00629b57;
-    border-radius: 3px;
+    border-radius: 20px;
     padding: 5px;
     margin: 20px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
