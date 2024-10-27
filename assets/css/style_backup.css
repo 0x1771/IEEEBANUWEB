@@ -33,7 +33,7 @@ body {
     font-size: 18px;
     color: #D4D6D7;
     overflow-x: hidden;
-    background-color: #000000;
+    background-color: #0f0f10;
   }
   
   a {
@@ -465,7 +465,7 @@ body {
   }
   
   .bg-dark {
-    background-color: #000000 !important;
+    background-color: #0f0f10;
   }
   
   .bg-light {
@@ -473,7 +473,7 @@ body {
   }
   
   .bg-black {
-    background-color: #000000 !important;
+    background-color: #0f0f10;
   }
   
   .bg-primary-gradient {
@@ -1426,7 +1426,7 @@ body {
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 5px;
-    background-color: #000000;
+    background-color: #181a1b;
   }
   
   .accordion .accordion-item .accordion-header .accordion-button:after {
@@ -1632,7 +1632,7 @@ body {
     position: relative;
     margin: 0;
     padding: 60px 40px;
-    background: #000000;
+    background: #181a1b;
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
@@ -3101,7 +3101,7 @@ body {
     position: relative;
     z-index: 9;
     padding: 0 80px;
-    background-color: #000000;
+    background-color: #0f0f10;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     /* Site Main Logo */
     /* Site Main Menu */
@@ -3115,6 +3115,7 @@ body {
   }
   
   .header-default .header-inner {
+    background-color: #0f0f10;
     display: flex;
     gap: 50px;
     justify-content: space-between;
@@ -4823,7 +4824,7 @@ body {
       Footer
   *****************************/
   .site-footer {
-    background-color: #000000;
+    background-color: #0f0f10;
     padding-top: 145px;
     position: relative;
     z-index: 9;
