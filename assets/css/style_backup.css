@@ -3237,7 +3237,7 @@ body {
   
   .header-default.is-sticky {
     position: fixed;
-    background-color: #000000;
+    background-color: #0f0f10;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
     top: -110px;
@@ -4934,7 +4934,7 @@ body {
   .site-content {
     position: relative;
     z-index: 2;
-    background-color: #000000;
+    background-color: #0f0f10;
   }
   
   .site-footer.sticky-footer {
@@ -5412,7 +5412,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 220px;
-    background-color: black;
+    background-color: #0f0f10;
     border-style: solid;
     border-color: #00629B;
     color: #00629B;
