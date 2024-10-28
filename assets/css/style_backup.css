@@ -781,88 +781,6 @@ body {
     background: radial-gradient(circle, rgba(190, 243, 233, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
   }
   
-  /*-----------------------*/
-  /* Cursor */
-  /*-----------------------*/
-  #cursor {
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-  }
-  
-  @media (hover: hover) and (pointer: fine) {
-    .cursor__circle {
-      width: 40px;
-      height: 40px;
-      margin-top: -50%;
-      margin-left: -50%;
-      border-radius: 50%;
-      border: 1px solid #77BEFF;
-      transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    /* Cursor Text */
-    #cursor.text .cursor__circle,
-    #cursor.arrow .cursor__circle {
-      width: 130px;
-      height: 130px;
-      border: none;
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-    #cursor.text::after {
-      content: '';
-      position: absolute;
-      left: -50%;
-      top: -50%;
-      width: 100%;
-      height: 100%;
-      color: #000000;
-      font-size: 18px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #cursor::after {
-      content: attr(data-cursor-text) !important;
-    }
-    /* Cursor Arrow */
-    #cursor.arrow::after {
-      content: '' !important;
-      position: absolute;
-      left: -50%;
-      top: -50%;
-      width: 100%;
-      height: 100%;
-      color: #000000;
-      font-size: 18px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-size: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    #cursor.cursor-link .cursor__circle {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    #cursor.cursor-link::after {
-      content: normal;
-      opacity: 0;
-    }
-    #cursor.overlay .cursor__circle {
-      width: 48px;
-      height: 48px;
-      background-color: rgba(227, 222, 193, 0.08);
-      border-color: transparent;
-    }
-  }
-  
   /*Font Weight*/
   .fw-600 {
     font-weight: 600;
@@ -3148,8 +3066,8 @@ body {
   }
   
   .header-default .site-menu .main-menu .nav-item a {
-    font-family: "Jost", sans-serif;
-    font-size: 18px;
+    font-family: "Russo One";
+    font-size: 17px;
     padding: 10px 0;
     color: #ffffff;
     position: relative;
@@ -4004,8 +3922,8 @@ body {
     line-height: 400px;
     font-family: "Russo One", sans-serif;
     color: #00629B;
-    left: 0px;
-    bottom: 55px;
+    left: 15px;
+    bottom: -90px;
   }
   
   .main-banner-1 .banner-content {
