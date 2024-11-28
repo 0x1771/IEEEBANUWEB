@@ -166,6 +166,7 @@ body {
   
   iframe {
     width: 100%;
+    margin-top: 10%;
   }
   
   label {
@@ -1913,6 +1914,7 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    margin-top: 25px;
   }
   
   .ieeeprojects-wrapper.ieeeprojects-style-1 .ieeeprojects-description {
@@ -2579,7 +2581,7 @@ body {
       padding: 40px;
     }
     .history-wrapper .history-info .history-year-lg {
-      font-size: 80px;
+      font-size: 64px;
     }
   }
   
@@ -5311,6 +5313,12 @@ body {
     margin-left: 450px;
   }
   
+  @media (max-width: 768px) { /* 768px veya istediğiniz genişlikte değiştirin */
+    .margin-left-for-newsletter {
+      margin-left: 0;
+    }
+  }
+  
   .img-resize{
   width: fit-content;
   height: 50px;
@@ -5388,4 +5396,10 @@ body {
   
   .contact-form button:hover {
     background-color: #004a75;
+  }
+
+  @media (max-width: 768px) {
+    iframe {
+      margin-top: 25%;
+    }
   }

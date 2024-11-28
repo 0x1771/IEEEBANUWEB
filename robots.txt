@@ -1,0 +1,5 @@
+# Bu dosya sitenin tarama kurallarını belirler
+User-agent: *
+Allow: /
+Allow: /subfolder-to-allow/
+Sitemap: https://ieeebanu.com/sitemap.xml
