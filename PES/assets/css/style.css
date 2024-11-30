@@ -691,8 +691,9 @@ ul {
     display: block;
     padding: 40px 0;
     z-index: 1;
-    left: -78px;
-    scale: ;
+    scale: 0.60;
+    left: -20%;
+
   }
 }
 
