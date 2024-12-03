@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <style>
+        /* Genel Stil */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Siyah arka plan */
+            color: #fff;
+        }
+
+        /* Menü */
+        .main-menu__main-menu-box {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between; 
+            align-items: center;
+            background-color: #000;
+            padding: 15px 30px;
+            position: relative; 
+        }
+
+        .main-menu__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 40px;
+        }
+
+        .main-menu__list a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .main-menu__list a.active {
+            color: #32cd32; 
+        }
+
+        /* Menü Çizgisi */
+        .main-menu__main-menu-box::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%; 
+            height: 1px; 
+            background-color: rgba(255, 255, 255, 0.3); 
+        }
+
+        /* Sağ Menü */
+        .main-menu__right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .main-menu__cart-search-nav-sidebar-icon-and-btn-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-menu__nav-sidebar-icon {
+            margin-right: 20px; 
+        }
+
+        .main-menu__btn-box a {
+            text-decoration: none;
+            color: #32cd32;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-menu__btn-box .icon-arrow-right {
+            margin-left: 10px;
+        }
+
+        /* İletişim Sayfası */
+        .contact-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100vh; 
+            padding-bottom: 30px; 
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-top: 120px;
+            color: #fff; 
+        }
+
+        .contact-header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .contact-header h3 {
+            font-size: 16px;
+            color: #aaa;
+        }
+
+        /* İletişime Geç Kutusu */
+        .contact-box {
+            text-align: center;
+            background-color: rgba(50, 205, 50, 0.1); /* Kutunun şeffaf yeşil arka planı */
+            border: 2px solid #32cd32; /* Kutunun yeşil kenarları */
+            border-radius: 10px; /* Yuvarlatılmış kenarlar */
+            padding: 20px;
+            margin: 300px auto;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            bottom: 50px; /* Kutuyu daha yukarıya taşı */
+        }
+
+        .contact-box a {
+            text-decoration: none;
+            color: #32cd32; /* Yeşil yazı */
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            padding: 10px 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .contact-box a:hover {
+            background-color: #32cd32; /* Hover durumunda yeşil arka plan */
+            color: #000; /* Yazı rengi siyah olur */
+            border-radius: 5px;
+        }
+
+        /* Açıklama metni */
+        .contact-box p {
+            color: #fff; /* Yazı rengi beyaz */
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+         /* Form Stili */
+         .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            flex: 1 1 calc(50% - 20px); /* Eşit genişlik ve aralarındaki boşluk */
+        }
+
+        .form-group.full-width {
+            flex: 1 1 100%; /* Tam genişlik */
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #32cd32;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        /* Gönder Butonu */
+        .submit-btn {
+            background-color: #32cd32;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #fff;
+            color: #32cd32;
+        }
+
+        /* Redesigned Pesnergy Button */
+.redesigned-btn {
+    text-decoration: none;
+    color: #000; /* Siyah yazı rengi */
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #32cd32; /* Yeşil arka plan */
+    border: 2px solid #32cd32; /* Yeşil kenarlık */
+    border-radius: 25px; /* Yuvarlatılmış kenarlar */
+    padding: 10px 20px; /* İçerik etrafında boşluk */
+    transition: all 0.3s ease; /* Hover efekti için geçiş */
+}
+
+/* Hover Durumu */
+.redesigned-btn:hover {
+    background-color: #fff; /* Beyaz arka plan */
+    color: #32cd32; /* Yeşil yazı */
+    border: 2px solid #32cd32; /* Yeşil kenarlık */
+    box-shadow: 0 4px 15px rgba(50, 205, 50, 0.3); /* Hafif gölge efekti */
+}
+
+/* İkon Ayarı */
+.redesigned-btn .icon-arrow-right {
+    margin-left: 10px; /* İkonun yazıdan uzaklığı */
+}
+
+/* Yukarı Butonu */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Ekranın altından uzaklık */
+    right: 20px; /* Ekranın sağından uzaklık */
+    width: 50px; /* Buton genişliği */
+    height: 50px; /* Buton yüksekliği */
+    background-color: #32cd32; /* Yeşil renk */
+    color: #fff; /* Yazı rengi */
+    font-size: 24px; /* Yazı boyutu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Yuvarlak buton */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+    text-decoration: none;
+    z-index: 1000; /* Diğer içeriklerin üstünde görünsün */
+}
+
+/* Hover Durumu */
+.scroll-to-top a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.scroll-to-top:hover {
+    background-color: #fff; /* Beyaz arka plan */
+    color: #32cd32; /* Yeşil yazı */
+}
+
+/* CTA Bölümü */
+.cta-one {
+    background-color: #32cd32; /* Yeşil arka plan */
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+}
+
+.cta-one__title {
+    color: #fff; /* Beyaz yazı rengi */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-one__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-one__form-input-box {
+    position: relative;
+}
+
+.cta-one__btn {
+    background-color: #fff; /* Buton beyaz */
+    color: #32cd32; /* Yeşil yazı */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.cta-one__btn:hover {
+    background-color: #32cd32; /* Yeşil arka plan */
+    color: #fff; /* Beyaz yazı */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hover gölgesi */
+}
+
+.icon-paper-plan {
+    margin-right: 10px; /* İkonun yazıdan uzaklığı */
+}
+
+.header {
+    background: linear-gradient(to right, #44b981, #2d97b7);
+    text-align: center;
+    padding: 60px 40px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.header .icon {
+    margin-top: 20px;
+    font-size: 2em;
+}
+.footer {
+    background-color: #000;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #444;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #44b981;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .contact a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #44b981;
+    text-decoration: none;
+}
+
+.footer .contact a:hover {
+    text-decoration: underline;
+}
+
+.footer .contact a img {
+    margin-right: 8px;
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+    flex-basis: 100%;
+    font-size: 0.9em;
+}
+    </style>
+</head>
+
+    </style>
+</head>
+<body>
+    <!-- Menü -->
+    <div class="main-menu__main-menu-box">
+        <ul class="main-menu__list">
+            <li><a href="index.html">ANASAYFA</a></li>
+            <li class="dropdown">
+                <a href="#">HAKKIMIZDA</a>
+                <ul>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                </ul>
+            </li>
+            <li><a href="event.html">ETKİNLİKLER</a></li>
+            <li><a href="projects.html">PROJELER</a></li>
+            <li><a href="#iletisim" class="active">İLETİŞİM</a></li>
+        </ul>
+
+        <!-- Sağ Menü -->
+        <div class="main-menu__right">
+            <div class="main-menu__cart-search-nav-sidebar-icon-and-btn-box">
+                <div class="main-menu__nav-sidebar-icon">
+                    <a class="navSidebar-button" href="#">
+                        <span class="icon-menu1"></span>
+                    </a>
+                </div>
+            </div>
+            <a href="../pesnergy.html" class="main-menu__btn thm-btn redesigned-btn">
+                Pesnergy <span class="icon-arrow-right"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- İLETİŞİM Başlık Bölümü -->
+    <div class="contact-header">
+        <h1>İLETİŞİM</h1>
+        <p>Anasayfa > İletişim</p>
+    </div>
+
+    <!-- İletişim Sayfası İçeriği -->
+    <div class="contact-box">
+        <h1>İletişime Geç</h1>
+        <p>Fikir, görüş, öneri ve sponsorluk için iletişime geçebilirsiniz.</p>
+        <form class="contact-form">
+            <!-- Ad ve Soyad -->
+            <div class="form-group">
+                <label for="first-name">Ad</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Adınızı giriniz">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Soyad</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Soyadınızı giriniz">
+            </div>
+            <!-- Mail ve Telefon -->
+            <div class="form-group">
+                <label for="email">Mail Adresi</label>
+                <input type="email" id="email" name="email" placeholder="E-posta adresinizi giriniz">
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefon Numarası</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telefon numaranızı giriniz">
+            </div>
+            <!-- Mesaj -->
+            <div class="form-group full-width">
+                <label for="message">Mesajınız</label>
+                <textarea id="message" name="message" placeholder="Mesajınızı yazınız"></textarea>
+            </div>
+            <!-- Gönder Butonu -->
+            <div class="form-group full-width">
+                <button type="submit" class="submit-btn">Gönder</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="header">
+        <h1>Whatsapp Grubuna Katılarak Etkinliklerden Haberdar Ol</h1>
+        <div class="icon">🚀</div>
+    </div>
+
+    <div class="site-footer__top">
+        <div class="container">
+            <div class="site-footer__top-inner">
+                <div class="site-footer__logo">
+                    <a href="index.html"><img src="assets/images/resources/logo-2.webp" alt="IEEE BANU Logo"></a>
+                </div>
+                <div class="site-footer__social">
+                    <a href="#"><i class="icon-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-section">
+            <img src="https://via.placeholder.com/150" alt="IEEE BANU Logo" style="margin-bottom: 20px;">
+        </div>
+        <div class="footer-section">
+            <h3>Hızlı Ulaşım</h3>
+            <ul>
+                <li><a href="#">IEEE BANU</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Etkinlikler</a></li>
+                <li><a href="#">Projeler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Sosyal Ağ</h3>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>İletişim</h3>
+            <a href="mailto:hanaylifatih@gmail.com">✉️ hanaylifatih@gmail.com</a>
+            <a href="https://instagram.com/ieeebanupes">📸 @ieeebanupes</a>
+        </div>
+        
+    </div>
+    
+            
+            
+            <div class="site-footer__bottom">
+                <p>© IEEE BANU adına 2024 yılında geliştirilmiştir</p>
+            </div>
+        </footer>
+    
+        <!-- Yukarı Butonu -->
+        <div class="scroll-to-top">
+            <a href="#">&#8593;</a> <!-- Yukarı ok -->
+        </div>
+    
+    </body>
+    
+
+
+    <div class="scroll-to-top">
+        <a href="#">&#8593;</a> <!-- Yukarı ok -->
+    </div>
+    
+</body>
