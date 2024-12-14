@@ -40,7 +40,7 @@
         this.game.state.start("title");
       }
     },
-    // title screen
+// title screen
 title: {
   create: function() {
     this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
@@ -49,6 +49,7 @@ title: {
     this.game.add.tween(this.logo).to({
       alpha: 1
     }, 1000, Phaser.Easing.Linear.None, true, 0);
+
     this.startBtn = this.game.add.button(this.game.world.width / 2 - 159, this.game.world.height - 120, 'startbtn', this.startClicked);
     this.startBtn.alpha = 0;
     this.game.add.tween(this.startBtn).to({
@@ -64,66 +65,116 @@ title: {
       this.logo.x = (this.game.world.width - this.logo.width) / 2;
       this.startBtn.x = (this.game.world.width - this.startBtn.width) / 2;
     }
+
+    // PHP'den en yüksek skorları al
+    this.showHighScores();
   },
+
+  showHighScores: function() {
+  fetch('../../php/santa_db/get_high_scores.php')
+    .then(response => response.json())  // JSON'a dönüştür
+    .then(data => {
+      // Gelen veriyi kontrol et
+      console.log(data);  // PHP'den gelen veri konsola yazdır
+      let highScoresText = 'High Scores:\n';
+      
+      // Eğer veri boş ise (beklenmeyen bir şey dönerse)
+      if (!data || data.length === 0) {
+        highScoresText = "No scores available yet.";
+      } else {
+        // Skorlar ve kullanıcı adlarıyla metin oluştur
+        data.forEach((entry, index) => {
+          highScoresText += (index + 1) + ". " + entry.username + ": " + entry.score + "\n";
+        });
+      }
+
+      // Skorları ekranda göster
+      if (this.highScoresLabel) {
+        this.highScoresLabel.setText(highScoresText);
+      } else {
+        this.highScoresLabel = this.game.add.text(this.game.world.width / 2, this.game.world.height / 2 + 100, highScoresText, {
+          font: "20px Arial",
+          fill: "white",
+          align: "center"
+        });
+        this.highScoresLabel.anchor.setTo(0.5); // Ortalamak için
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching high scores:', error);
+      if (this.highScoresLabel) {
+        this.highScoresLabel.text = "Error loading high scores.";
+      }
+    });
+},
+
+  
+
+  // Başla butonuna tıklama olayı
   startClicked: function() {
     this.game.state.start("username"); // Kullanıcı adı ekranına geçiyoruz
   },
 },
 
-// Kullanıcı adı ekranı (HTML input)
+
 username: {
   create: function() {
-    this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
-    this.usernameLabel = this.game.add.text(this.game.world.width / 2 - 100, this.game.world.height / 2 - 100, 'Enter Username:', {
+    // Arka plan ekleme
+    this.bg = this.game.add.tileSprite(0, 0, this.game.width, this.game.height, 'snow-bg');
+
+    // Kullanıcı adı label'ı
+    this.usernameLabel = this.game.add.text(this.game.world.width / 2, this.game.world.height / 2 - 100, 'Enter Username:', {
       font: "24px Arial",
       fill: "white",
       fontWeight: "bold",
       align: "center"
     });
+    this.usernameLabel.anchor.setTo(0.5); // Ortalamak için
 
     // HTML input alanı
     var inputElement = document.createElement("input");
     inputElement.type = "text";
     inputElement.placeholder = "Username";
     inputElement.style.position = "absolute";
-    inputElement.style.left = `${this.game.world.width / 2 - 100}px`;
-    inputElement.style.top = `${this.game.world.height / 2}px`;
+    inputElement.style.left = "50%";
+    inputElement.style.top = "50%";
+    inputElement.style.transform = "translate(-50%, -50%)"; // Tam ortalamak için
     inputElement.style.fontSize = "24px";
     inputElement.style.textAlign = "center";
     inputElement.style.padding = "8px";
     inputElement.style.borderRadius = "10px";
     inputElement.style.border = "2px solid #ffffff";
+    inputElement.style.backgroundColor = "#000000"; // Arka plan rengini belirleme
+    inputElement.style.color = "#ffffff"; // Yazı rengini beyaz yapma
     document.body.appendChild(inputElement);
 
-    // HTML input'tan veri almak için buton
-    this.continueBtn = this.game.add.button(this.game.world.width / 2 - 159, this.game.world.height - 120, 'startbtn', this.continueClicked, this);
-    this.continueBtn.alpha = 0;
-    this.game.add.tween(this.continueBtn).to({
-      alpha: 1
-    }, 1000, Phaser.Easing.Linear.None, true, 1000);
+    // Devam butonu
+    this.continueBtn = this.game.add.button(this.game.world.width / 2, this.game.world.height - 120, 'startbtn', this.continueClicked, this);
+    this.continueBtn.anchor.setTo(0.5); // Ortalamak için
+    this.continueBtn.alpha = 0; // Görünmez başlat
+    this.game.add.tween(this.continueBtn).to({ alpha: 1 }, 1000, Phaser.Easing.Linear.None, true, 1000);
   },
 
   continueClicked: function() {
-    var username = document.querySelector('input[type="text"]').value.trim(); // HTML input'tan değer alıyoruz
+    // HTML input alanından değeri al
+    var inputElement = document.querySelector('input[type="text"]');
+    var username = inputElement.value.trim();
+
     if (username === "") {
-      alert("Please enter a username!"); // Eğer boşsa, kullanıcıya uyarı veriyoruz
+      alert("Please enter a username!"); // Boşsa uyarı göster
     } else {
       // Kullanıcı adını global değişkende sakla
       this.game.username = username;
 
-      // Kullanıcı adı ile 'instructions' state'ine geçiyoruz
+      // Kullanıcı adı ile 'instructions' state'ine geç
       this.game.state.start("instructions", true, false, username);
 
-      // Input elemanını ve butonu gizle
-      var inputElement = document.querySelector('input[type="text"]');
-      var continueBtn = this.continueBtn;
-
-      // Input ve butonu gizle
-      inputElement.style.display = "none"; // Inputu gizle
-      continueBtn.alpha = 0; // Butonun alfa değerini sıfır yaparak gizle
+      // Input alanını kaldır
+      inputElement.parentNode.removeChild(inputElement);
     }
   }
 },
+
 
     // instructions screen
     instructions: {
