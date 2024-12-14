@@ -154,174 +154,179 @@ username: {
         this.game.state.start("play");
       },
     },
-    // playing
-    play: {
+    // Main game state "play"
+play: {
   create: function() {
-    highScore = gameScore > highScore ? Math.floor(gameScore) : highScore;
-    gameScore = 0;
-    this.currentFrame = 0;
-    this.particleInterval = 2 * 60;
-    this.gameSpeed = 580;
-    this.isGameOver = false;
+      highScore = gameScore > highScore ? Math.floor(gameScore) : highScore;
+      gameScore = 0;
+      this.currentFrame = 0;
+      this.particleInterval = 2 * 60;
+      this.gameSpeed = 580;
+      this.isGameOver = false;
 
-    // Fizik motoru başlatıldı
-    this.game.physics.startSystem(Phaser.Physics.ARCADE);
+      // Physics engine
+      this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-    // Müzik
-    this.music = this.game.add.audio("drivin-home");
-    this.music.loop = true;
-    this.music.play();
+      // Background music
+      this.music = this.game.add.audio("drivin-home");
+      this.music.loop = true;
+      this.music.play();
 
-    // Arka plan
-    this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
-    this.bg.fixedToCamera = true;
+      // Background
+      this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
+      this.bg.fixedToCamera = true;
 
-    // Zemin ve hediye grupları
-    this.platforms = this.game.add.group();
-    this.platforms.enableBody = true;
+      // Platforms and gifts groups
+      this.platforms = this.game.add.group();
+      this.platforms.enableBody = true;
 
-    this.gifts = this.game.add.group();
-    this.gifts.enableBody = true;
+      this.gifts = this.game.add.group();
+      this.gifts.enableBody = true;
 
-    var plat;
-    for (var i = 0; i < 5; i++) {
-      // Platform oluştur
-      plat = this.platforms.create(i * 192, this.game.world.height - 24, 'platform');
-      plat.width = 192;
-      plat.height = 24;
-      this.game.physics.arcade.enable(plat);
-      plat.body.immovable = true;
-      plat.body.bounce.set(0);
+      // Create platforms and gifts
+      var plat;
+      for (var i = 0; i < 5; i++) {
+          plat = this.platforms.create(i * 192, this.game.world.height - 24, 'platform');
+          plat.width = 192;
+          plat.height = 24;
+          this.game.physics.arcade.enable(plat);
+          plat.body.immovable = true;
+          plat.body.bounce.set(0);
 
-      // Rastgele platforma hediye ekle
-      if (Math.random() < 0.2) { // %50 ihtimalle hediye oluştur
-        var gift = this.gifts.create(plat.x + plat.width / 2, plat.y - 10, 'gift'); // Hediye platformun üzerine yerleştirilir
-        gift.anchor.set(0.5); // Ortalanır
-        gift.scale.set(0.15); // Hediye boyutunu ayarla
-        gift.body.immovable = true; // Hediye hareket etmeyecek
+          if (Math.random() < 0.3) {
+              var giftSide = Math.random() < 0.5 ? 'left' : 'right';
+              var giftX = giftSide === 'left' ? plat.x - 20 : plat.x + plat.width + 20;
+              var gift = this.gifts.create(giftX, plat.y - 10, 'gift');
+              gift.anchor.set(0.5);
+              gift.scale.set(0.10);
+              gift.body.immovable = true;
+          }
       }
-    }
-    this.lastPlatform = plat;
+      this.lastPlatform = plat;
 
-    // Santa karakteri
-    this.santa = this.game.add.sprite(100, this.game.world.height - 200, 'santa-running');
-    this.santa.animations.add("run");
-    this.santa.animations.play('run', 20, true);
-    this.game.physics.arcade.enable(this.santa);
-    this.santa.body.gravity.y = 1450;
-    this.santa.body.collideWorldBounds = true;
+      // Santa character
+      this.santa = this.game.add.sprite(100, this.game.world.height - 200, 'santa-running');
+      this.santa.animations.add("run");
+      this.santa.animations.play('run', 20, true);
+      this.game.physics.arcade.enable(this.santa);
+      this.santa.body.gravity.y = 1450;
+      this.santa.body.collideWorldBounds = true;
 
-    // Skor ve yüksek skor
-    this.score = this.game.add.text(20, 20, '', {
-      font: "24px Arial",
-      fill: "white",
-      fontWeight: "bold"
-    });
-    if (highScore > 0) {
-      this.highScore = this.game.add.text(20, 45, 'Best: ' + highScore, {
-        font: "18px Arial",
-        fill: "white"
+      // Score and high score
+      this.score = this.game.add.text(20, 20, '', {
+          font: "24px Arial",
+          fill: "white",
+          fontWeight: "bold"
       });
-    }
+      if (highScore > 0) {
+          this.highScore = this.game.add.text(20, 45, 'Best: ' + highScore, {
+              font: "18px Arial",
+              fill: "white"
+          });
+      }
 
-    // Klavye kontrolleri
-    this.cursors = this.game.input.keyboard.createCursorKeys();
-    this.spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+      // Keyboard controls
+      this.cursors = this.game.input.keyboard.createCursorKeys();
+      this.spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
-    // Ekrana tıklama dinleyicisi
-    this.game.input.onDown.add(this.jump, this);
+      // Touch input listener
+this.game.input.onDown.add(this.startJump, this);
+this.game.input.onUp.add(this.stopJump, this);
+
+// Spacebar input listener
+let spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+spacebar.onDown.add(this.startJump, this);
+spacebar.onUp.add(this.stopJump, this);
+
   },
 
   update: function() {
-    if (this.isJumping && (this.cursors.up.isDown || this.spacebar.isDown)) {
-      this.jumpTimer += this.game.time.physicsElapsed; // Zıplama süresini artır
-      if (this.jumpTimer < 0.3) { // Maksimum 0.3 saniye boyunca zıplama sürer
-          this.santa.body.velocity.y = -350; // Yukarı doğru sürekli hız uygula
-      }
-  } else {
-      this.isJumping = false; // Tuş bırakıldığında zıplamayı durdur
-  }
-
-  // Karakter yere temas edince zıplama sıfırlanır
-  if (this.santa.body.touching.down) {
-      this.isJumping = false;
-  };
-
-    
-    var that = this;
-
-    if (!this.isGameOver) {
-      // Skor güncelleniyor
-      gameScore += 0.5;
-      this.gameSpeed += 0.03;
-      this.score.text = 'Score: ' + Math.floor(gameScore);
-
-      var moveAmount = this.gameSpeed / 100;
-
-      // Çarpışma kontrolleri
-      this.game.physics.arcade.collide(this.santa, this.platforms);
-      this.game.physics.arcade.overlap(this.santa, this.gifts, this.endGame, null, this);
-
-      // Santa yere düştü mü?
-      if (this.santa.body.bottom >= this.game.world.bounds.bottom) {
-        this.isGameOver = true;
-        this.endGame();
-      }
-
-      // Klavye ile zıplama
-      if (this.cursors.up.isDown && this.santa.body.touching.down ||
-          this.spacebar.isDown && this.santa.body.touching.down) {
-        this.jump();
-      }
-
-      // Platformların hareketi
-      this.platforms.children.forEach(function(platform) {
-        platform.body.position.x -= moveAmount;
-        if (platform.body.right <= 0) {
-          platform.kill();
-          var plat = that.platforms.create(that.lastPlatform.body.right + 192, that.game.world.height - (Math.floor(Math.random() * 50)) - 24, 'platform');
-          plat.width = 192;
-          plat.height = 24;
-          plat.body.immovable = true;
-          that.lastPlatform = plat;
-
-          // Yeni platforma rastgele hediye ekle
-          if (Math.random() < 0.3) { // %20 ihtimalle hediye ekle
-            var gift = that.gifts.create(plat.x + plat.width / 2, plat.y - 10, 'gift');
-            gift.anchor.set(0.5);
-            gift.scale.set(0.13);
-            gift.body.immovable = true;
+      if (isMobile) {
+          if (this.isJumping) {
+              this.jumpTimer += this.game.time.physicsElapsed;
+              if (this.jumpTimer < 0.3) {
+                  this.santa.body.velocity.y = -350;
+              }
           }
-        }
-      });
+      } else {
+          if (this.isJumping && (this.cursors.up.isDown || this.spacebar.isDown)) {
+              this.jumpTimer += this.game.time.physicsElapsed;
+              if (this.jumpTimer < 0.3) {
+                  this.santa.body.velocity.y = -350;
+              }
+          } else {
+              this.isJumping = false;
+          }
+      }
 
-      // Hediyelerin (gifts) hareketi
-      this.gifts.children.forEach(function(gift) {
-        gift.body.position.x -= moveAmount;
-        if (gift.body.right <= 0) {
-          gift.kill(); // Hediye ekran dışında kalırsa yok et
-        }
-      });
-    }
+      if (this.santa.body.touching.down) {
+          this.isJumping = false;
+          this.jumpTimer = 0;
+      }
+
+      var that = this;
+      if (!this.isGameOver) {
+          gameScore += 0.5;
+          this.gameSpeed += 0.03;
+          this.score.text = 'Score: ' + Math.floor(gameScore);
+
+          var moveAmount = this.gameSpeed / 100;
+
+          this.game.physics.arcade.collide(this.santa, this.platforms);
+          this.game.physics.arcade.overlap(this.santa, this.gifts, this.endGame, null, this);
+
+          if (this.santa.body.bottom >= this.game.world.bounds.bottom) {
+              this.isGameOver = true;
+              this.endGame();
+          }
+
+          this.platforms.children.forEach(function(platform) {
+              platform.body.position.x -= moveAmount;
+              if (platform.body.right <= 0) {
+                  platform.kill();
+                  var plat = that.platforms.create(that.lastPlatform.body.right + 192, that.game.world.height - (Math.floor(Math.random() * 50)) - 24, 'platform');
+                  plat.width = 192;
+                  plat.height = 24;
+                  plat.body.immovable = true;
+                  that.lastPlatform = plat;
+
+                  if (Math.random() < 0.3) {
+                      var gift = that.gifts.create(plat.x + plat.width / 2, plat.y - 10, 'gift');
+                      gift.anchor.set(0.5);
+                      gift.scale.set(0.13);
+                      gift.body.immovable = true;
+                  }
+              }
+          });
+
+          this.gifts.children.forEach(function(gift) {
+              gift.body.position.x -= moveAmount;
+              if (gift.body.right <= 0) {
+                  gift.kill();
+              }
+          });
+      }
   },
 
-  jump: function() {
-    if (this.santa.body.touching.down) { 
-        this.isJumping = true; // Zıplama başladı
-        this.jumpTimer = 0; // Zıplama süresini sıfırla
-        this.jumpSound = this.game.add.audio("hop");
-        this.jumpSound.play();
-        this.santa.body.velocity.y = -350; // İlk zıplama hızı
-    }
-},
+  startJump: function() {
+      if (this.santa.body.touching.down) {
+          this.isJumping = true;
+          this.jumpTimer = 0;
+          this.jumpSound = this.game.add.audio("hop");
+          this.jumpSound.play();
+          this.santa.body.velocity.y = -350;
+      }
+  },
 
-    
+  stopJump: function() {
+      this.isJumping = false;
+  },
 
   endGame: function() {
-    this.music.stop();
-    this.music = this.game.add.audio("ho-ho-ho");
-    this.music.play();
-    this.game.state.start("gameOver");
+      this.music.stop();
+      this.music = this.game.add.audio("ho-ho-ho");
+      this.music.play();
+      this.game.state.start("gameOver");
   }
 },
 
@@ -442,12 +447,6 @@ username: {
           link.download = 'score_image.jpg';
           link.href = canvas.toDataURL("image/jpg");
           link.click();
-    
-          var shareUrl = "https://www.instagram.com/create/story/";
-          var userConfirmation = confirm("Instagram story'ye paylaşmak için 'Tamam' butonuna basın!");
-          if (userConfirmation) {
-            window.location.href = shareUrl;
-          }
         };
       },
     
