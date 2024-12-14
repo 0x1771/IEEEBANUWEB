@@ -153,7 +153,6 @@ username: {
       playClicked: function() {
         this.game.state.start("play");
       },
-<<<<<<< HEAD
     },
     // playing
     play: {
@@ -292,66 +291,6 @@ username: {
             gift.anchor.set(0.5);
             gift.scale.set(0.13);
             gift.body.immovable = true;
-=======
-      // instructions screen
-      instructions: {
-        create: function() {
-          this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
-
-          if (this.game.device.desktop) {
-          this.instructions = this.game.add.sprite(this.game.world.width / 2 - 292, 30, 'instructions');
-          } else {
-            this.instructions = this.game.add.sprite(this.game.world.width / 2 - 292, 150, 'instructions');
-            this.instructions.scale.x = 0.5;
-            this.instructions.anchor.setTo(0.5);
-            this.instructions.x = this.game.world.centerX;
-          }
-          this.instructions.alpha = 0;
-          this.game.add.tween(this.instructions).to({
-            alpha: 1
-          }, 800, Phaser.Easing.Linear.None, true, 0);
-          this.playBtn = this.game.add.button(this.game.world.width / 2 - 159, this.game.world.height - 120, 'playbtn', this.playClicked);
-          this.playBtn.alpha = 0;
-          this.game.add.tween(this.playBtn).to({
-            alpha: 1
-          }, 800, Phaser.Easing.Linear.None, true, 800);
-        },
-        playClicked: function() {
-          this.game.state.start("play");
-        },
-      },
-      // playing
-      play: {
-        create: function() {
-          highScore = gameScore > highScore ? Math.floor(gameScore) : highScore;
-          gameScore = 0;
-          this.currentFrame = 0;
-          this.particleInterval = 2 * 60;
-          this.gameSpeed = 580;
-          this.isGameOver = false;
-          this.game.physics.startSystem(Phaser.Physics.ARCADE);
-          this.music = this.game.add.audio("drivin-home");
-          this.music.loop = true;
-          this.music.play();
-          this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
-          this.bg.fixedToCamera = true;
-          this.bg.autoScroll(-this.gameSpeed / 6, 0);
-          this.emitter = this.game.add.emitter(this.game.world.centerX, -32, 50);
-          this.platforms = this.game.add.group();
-          this.platforms.enableBody = true;
-          this.platforms.createMultiple(5, 'platform', 0, false);
-          this.platforms.setAll('anchor.x', 0.5);
-          this.platforms.setAll('anchor.y', 0.5);
-          var plat;
-          for (var i = 0; i < 5; i++) {
-            plat = this.platforms.getFirstExists(false);
-            plat.reset(i * 192, this.game.world.height - 24);
-            plat.width = 192;
-            plat.height = 24;
-            this.game.physics.arcade.enable(plat);
-            plat.body.immovable = true;
-            plat.body.bounce.set(0);
->>>>>>> refs/remotes/origin/main
           }
         }
       });
@@ -458,25 +397,6 @@ username: {
         // Veritabanına gönderme işlemi
         this.sendScoreToServer(this.game.username, Math.floor(gameScore));
       },
-<<<<<<< HEAD
-=======
-      gameOver: {
-        create: function() {
-            this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
-            if (this.game.device.desktop) {
-              this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 50, 'game-over');
-            } else {
-                this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 100, 'game-over');
-                this.msg.scale.x = 0.5;
-                this.msg.anchor.setTo(0.5);
-                this.msg.x = this.game.world.centerX;
-            }
-
-            this.msg.alpha = 0;
-            this.game.add.tween(this.msg).to({
-                alpha: 1
-            }, 600, Phaser.Easing.Linear.None, true, 0);
->>>>>>> refs/remotes/origin/main
     
       // Veriyi PHP'ye gönderme
       sendScoreToServer: function(username, score) {
