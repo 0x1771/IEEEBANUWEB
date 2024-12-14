@@ -57,7 +57,15 @@
       instructions: {
         create: function() {
           this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
+
+          if (this.game.device.desktop) {
           this.instructions = this.game.add.sprite(this.game.world.width / 2 - 292, 30, 'instructions');
+          } else {
+            this.instructions = this.game.add.sprite(this.game.world.width / 2 - 292, 150, 'instructions');
+            this.instructions.scale.x = 0.5;
+            this.instructions.anchor.setTo(0.5);
+            this.instructions.x = this.game.world.centerX;
+          }
           this.instructions.alpha = 0;
           this.game.add.tween(this.instructions).to({
             alpha: 1
@@ -179,7 +187,15 @@
       gameOver: {
         create: function() {
             this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
-            this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 50, 'game-over');
+            if (this.game.device.desktop) {
+              this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 50, 'game-over');
+            } else {
+                this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 100, 'game-over');
+                this.msg.scale.x = 0.5;
+                this.msg.anchor.setTo(0.5);
+                this.msg.x = this.game.world.centerX;
+            }
+
             this.msg.alpha = 0;
             this.game.add.tween(this.msg).to({
                 alpha: 1
