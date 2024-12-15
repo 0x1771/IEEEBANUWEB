@@ -22,18 +22,18 @@
         this.game.load.audio('drivin-home', 'assets/drivin-home-low.mp3');
         this.game.load.audio('ho-ho-ho', 'assets/ho-ho-ho.mp3');
         this.game.load.audio('hop', 'assets/jump-sound.mp3');
-        this.game.load.image('platform', 'assets/ground.png');
-        this.game.load.spritesheet('santa-running', 'assets/santa-running.png', 37, 52);
-        this.game.load.image('snow-bg', 'assets/bg.png');
-        this.game.load.image('snowflake', 'assets/snowflake.png');
-        this.game.load.image("logo", "assets/game-logo.png");
-        this.game.load.image("instructions", "assets/instructions.png");
-        this.game.load.image("game-over", "assets/game-over.png");
-        this.game.load.image("startbtn", "assets/start-btn.png");
-        this.game.load.image("playbtn", "assets/play-btn.png");
-        this.game.load.image("restartBtn", "assets/restart-btn.png");
-        this.game.load.image("insta-st", "assets/insta-st.png");
-        this.game.load.image('gift', 'assets/gift.png');  // gift.png asset'ini yükle
+        this.game.load.image('platform', 'assets/ground.webp');
+        this.game.load.spritesheet('santa-running', 'assets/santa-running.webp', 37, 52);
+        this.game.load.image('snow-bg', 'assets/snow-bg.png');
+        this.game.load.image('snowflake', 'assets/snowflake.webp');
+        this.game.load.image("logo", "assets/game-logo.webp");
+        this.game.load.image("instructions", "assets/instructions.webp");
+        this.game.load.image("game-over", "assets/game-over.webp");
+        this.game.load.image("startbtn", "assets/start-btn.webp");
+        this.game.load.image("playbtn", "assets/play-btn.webp");
+        this.game.load.image("restartBtn", "assets/restart-btn.webp");
+        this.game.load.image("insta-st", "assets/insta-st.webp");
+        this.game.load.image('gift', 'assets/gift.webp');  // gift.webp asset'ini yükle
         
       },
       create: function() {
