@@ -1,0 +1,10 @@
+.nav-link:hover{
+    color: #FFA300
+}
+
+.active{
+    color: #FFA300;
+}
+.navbar-nav >.nav-item> .nav-link.active {
+    color: #FFA300;
+}
