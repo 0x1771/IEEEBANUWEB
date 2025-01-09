@@ -1,4 +1,18 @@
 body{
     font-family: 'Russo One', serif;
+    background-color: #DBD3D3;
 }
+.carousel-content {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+    color: white; 
+    text-align: center; 
+    padding: 20px;
+    width: 90%; 
+    object-fit: cover;
+}
+
 

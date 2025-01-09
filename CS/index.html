@@ -22,24 +22,27 @@
     <!--CSS-->
 
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/animatecss/animate.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
  
 
 </head>
 
 <body>
     
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <!--NavBar Start-->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top  "> <!--Duruma gore "sticky-top" kullan-->
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="assets/images/IEEE BANU CS LOGO.png" alt="IEEE BANU CS LOGO" width="500">
+            <img src="assets/images/IEEE BANU CS LOGO.png" class="img-fluid" alt="IEEE BANU CS LOGO" width="300">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
               </li>
@@ -59,14 +62,36 @@
           </div>
         </div>
       </nav>
-    
+    <!--NavBar End-->
 
+    <!--Carousel Start-->
+    <div class="d-flex justify-content-center">
+    <div id="carouselSlideOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000"> <!--Hız test için yüksek, azaltılacak-->
+        <div class="carousel-inner">
+             <!--Resimlerin boyutunun optimizasyon için küçülmesi lazım, boyut oranlarına dikkat hepsi aynı olmak zorunda!!!!!!!!-->
+          <div class="carousel-item active main-carousel">
+            <img src="assets/images/Main Carousel/Algo2023-1.jpg" class="d-block w-100" alt="AlgoSprint">
+          </div>
+          <div class="carousel-item main-carousel">
+            <img src="assets/images/Main Carousel/Algo2024-1.jpg" class="d-block w-100" alt="AlgoSprint">
+          </div>
+          <div class="carousel-item main-carousel">
+            <img src="assets/images/Main Carousel/Algo2024-2.JPG" class="d-block w-100" alt="AlgoSprint">
+          </div>
+          <div class="carousel-item main-carousel">
+            <img src="assets/images/Main Carousel/Insight2023-1.jpg" class="d-block w-100" alt="Insight360">
+          </div>
+          <div class="carousel-item main-carousel">
+            <img src="assets/images/Main Carousel/TEYK2024-1.jpg" class="d-block w-100" alt="TEYK">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-content">
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, repellendus?</h1>
+      </div>
+    </div>
 
-
-
-
-
-
+    <!--Carousel END-->
 
 
 

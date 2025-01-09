@@ -5,6 +5,48 @@
 .active{
     color: #FFA300;
 }
+
 .navbar-nav >.nav-item> .nav-link.active {
     color: #FFA300;
 }
+#carouselSlideOnly{
+    width: 100%;
+}
+
+  
+  #carouselSlideOnly .carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+  }
+
+  #carouselSlideOnly::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1; 
+  }
+  .btn-primary{
+    background-color: #FFA300;
+    color: black;
+    
+  }
+
+  .btn-primary:hover{
+    background-color:black;
+    color: #FFA300;
+  }
+
+  #carouselSlideOnly .carousel-item {
+    position: relative;
+    height: 100vh; /* her slayt tam ekran */
+  }
+
+  #carouselSlideOnly .carousel-innet{
+    width: 100vh;
+  } 
