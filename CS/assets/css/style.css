@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Russo One', serif;
     background-color: #DBD3D3;
@@ -14,5 +18,87 @@ body{
     width: 90%; 
     object-fit: cover;
 }
+
+.cs-color{
+    color:#FFA300 ;
+}
+
+.ieee-color{
+    color: #00629B;
+}
+
+
+
+
+
+.carousel-content-button {
+  all: unset;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: absolute;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  bottom: 20px;
+  left: 20px;
+}
+
+.carousel-content-button::after,
+.carousel-content-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.carousel-content-button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.carousel-content-button::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.carousel-content-button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.carousel-content-button:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-content-button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
 
 
