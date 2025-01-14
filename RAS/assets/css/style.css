@@ -1,0 +1,52 @@
+
+
+body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #04000A;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;            logoyu ortalıyo*/
+    padding: 10px;
+    background-color: #04000A;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;     
+    margin: 10px;            
+    padding: 10px;         
+    display: flex;       
+    justify-content: flex; 
+    gap: 20px;              
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: purple; }
+
+footer {
+        text-align: center;
+        padding: 20px;
+        background: #04000A;
+        color: #ffffff;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
