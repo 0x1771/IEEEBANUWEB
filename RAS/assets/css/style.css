@@ -65,3 +65,92 @@ footer {
     padding: 0;
     gap: 20px;                
 }
+
+.image-container {
+    position: relative;         /* Metinleri üst üste getirmek için relative konum */
+    width: 50%;                 /* Görselin genişliği */
+    margin: 0 auto;             /* Ortalamak isterseniz */
+    cursor: pointer;            /* Fare ikonu tıklanabilir olduğunu belli eder */
+    border: 5px solid purple;
+    animation: grow-shrink 3s infinite; /* Görsel animasyonu */
+  }
+
+  /* Görselin kendisi */
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: 30%;
+    opacity: 0.3;
+  }
+
+  /* "Nedir?" metni */
+  .overlay-text {
+    position: absolute;       
+    top: 50%;                 
+    left: 50%;                
+    transform: translate(-50%, -50%);
+    color: white;            
+    font-size: 48px;         
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+    overflow: hidden;  
+    animation: fade-in-out 3s infinite; /* Metin animasyonu */ 
+  }
+
+  /* Gizli metni başlangıçta saklayın */
+  .hidden-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Arkada yarı saydam karartma */ 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;                /* Metin başlangıçta görünmez */
+    transition: opacity 0.3s;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto; 
+  }
+
+  /* Fare görselin üzerine gelince ve tıklanınca görünür yapmak için */
+  .image-container:hover .hidden-text,
+  .image-container:active .hidden-text {
+    opacity: 1;
+  }
+
+  /* Fare görselin üzerine gelince ve tıklanınca animasyonları durdur */
+  .image-container:hover,
+  .image-container:active {
+    animation-play-state: paused; /* Görsel animasyonunu durdur */
+  }
+
+  .image-container:hover .overlay-text,
+  .image-container:active .overlay-text {
+    animation-play-state: paused; /* Metin animasyonunu durdur */
+  }
+
+  /* Görsel animasyonu */
+  @keyframes grow-shrink {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Metin animasyonu */
+  @keyframes fade-in-out {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
