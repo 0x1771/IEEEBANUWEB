@@ -58,3 +58,13 @@
   height: 100%;
 }
   
+.card-body {
+  display: flex;         
+  flex-direction: column; 
+}
+
+
+.card-body .btn {
+  margin-top: auto;       
+  align-self: flex-start; 
+}
