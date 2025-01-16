@@ -27,7 +27,7 @@
                                 <a href="index.html"><img src="assets/images/raslogo.png" width="600px" alt=""></a>
                             </div>
                         </div>
-                        <ul>
+                        <ul class="nav-links">
                             <li><a href="index.html">Anasayfa</a></li>
                             <li><a href="about.html">Hakkında</a></li>
                             <li><a href="event.html">Etkinlikler</a></li>
@@ -40,7 +40,7 @@
         </header>
         <main class="main-content">
             <div class="image-container" onclick="toggleText()">
-                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <img src="assets/images/RAS_Nedir.png" alt="">
                 <div class="overlay-text">Nedir?</div>
                 <div class="hidden-text" id="popupText">
                     <!-- Bu metni istediğiniz gibi düzenleyebilirsiniz -->
@@ -50,19 +50,24 @@
                 </div>
             </div>
             <div class="image-container" onclick="window.location.href='event.html'" style="margin-top: 50px;">
-                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <img src="assets/images/RAS_Nedir.png" alt="">
                 <div class="overlay-text">Etkinliklerimiz</div>
                 <div class="click-text">Görmek İçin Tıkla!</div>
             </div>
             <div class="image-container" onclick="window.location.href='project.html'" style="margin-top: 50px;">
-                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <img src="assets/images/RAS_Nedir.png" alt="">
                 <div class="overlay-text">Projelerimiz</div>
                 <div class="click-text">Görmek İçin Tıkla!</div>
             </div>
             <div class="image-container" onclick="window.location.href='contact.html'" style="margin-top: 50px;">
-                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <img src="assets/images/RAS_Nedir.png" alt="">
                 <div class="overlay-text">İletişim</div>
                 <div class="click-text">İletişime geçmek için tıkla!</div>
+            </div>
+            <div class="image-slider" id="imageSlider">
+                <div class="image-track">
+                    <!-- Görselleri buraya ekleyeceğiz -->
+                </div>
             </div>
         </main>
         <footer>
@@ -77,6 +82,7 @@
             <p>&copy; IEEE BANU adına 2024 yılında geliştirilmiştir.</p>
         </footer>
     </div>
+    <script src="assets/js/main.js"></script>
     <script>
         // Sayfanın en üstüne gitmek için fonksiyon
         function scrollToTop() {
