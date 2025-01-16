@@ -11,8 +11,39 @@ html, body {
   min-height: 100vh;
 }
 
+/* Kapak görseli stili */
+.cover-image {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Yükseklik ayarı, ihtiyaç doğrultusunda değiştirilebilir */
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-text {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .main-content {
-  flex: 1;
+  padding-top: 20px;
+}
+
+.main-header {
+  background-color: #04000A;
+  color: white;
+  padding: 20px;
 }
 
 footer {
@@ -28,7 +59,7 @@ body {
   background-color: #04000A;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,10 +74,9 @@ header {
 
 nav ul {
   list-style: none;
-  margin: 10px;
-  padding: 10px;
+  margin: 0;    /* Düzenleme yapıldı */
+  padding: 0;   /* Düzenleme yapıldı */
   display: flex;
-  justify-content: flex;
   gap: 20px;
 }
 
@@ -64,11 +94,19 @@ nav ul li a:hover {
   color: purple;
 }
 
+.main-menu__logo {
+  flex-shrink: 0; /* Logonun boyutunun küçülmesini engellemek için eklendi */
+}
+
 .main-menu__wrapper-inner {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
+  justify-content: space-between; /* Sağa dayalı hale getirmek için flex kullanıldı */
+  width: 100%; /* Genişliği %100 yaparak sağa dayalı görünmesini sağladık */
+}
+
+.main-menu__wrapper-inner .nav-links {
+  margin-left: auto; /* Sağa dayalı hale getirmek için eklendi */
 }
 
 .main-menu__wrapper-inner ul {
@@ -80,20 +118,39 @@ nav ul li a:hover {
 }
 
 .image-container {
-  position: relative;         /* Metinleri üst üste getirmek için relative konum */
-  width: 50%;                 /* Görselin genişliği */
-  margin: 20px auto;          /* Ortalamak isterseniz */
-  cursor: pointer;            /* Fare ikonu tıklanabilir olduğunu belli eder */
+  display: flex;           /* Flexbox kullanımı */
+  width: 80%;              /* Genişlik ayarı, isteğe bağlı olarak değiştirilebilir */
+  margin: 20px auto;       /* Ortalamak için margin ayarı */
+  cursor: pointer;         /* Fare ikonu tıklanabilir olduğunu belli eder */
   border: 5px solid purple;
+  aspect-ratio: 4 / 1;      /* 3 genişlik, 2 yükseklik oranı */
+  height: auto;             /* Yüksekliği otomatik olarak ayarla */
 }
 
 /* Görselin kendisi */
-.image-container img {
-  display: block;
-  width: 100%;
-  height: auto;               /* Yüksekliği otomatik olarak ayarla */
-  opacity: 0.3;
+.image-container .image {
+  flex: 1;                 /* 1/3 genişlik */
+  height: 100%;            /* Yüksekliği tam olarak doldur */
 }
+
+.image-container .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Görselin orantılı olarak kesilmesini sağlar */
+}
+
+/* Metin ve diğer içeriğin bulunduğu div */
+.image-container .content {
+  flex: 2;                 /* 2/3 genişlik */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
 
 /* "Nedir?", "Etkinliklerimiz", "Projelerimiz" ve "İletişim" metni */
 .overlay-text {
@@ -102,11 +159,10 @@ nav ul li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 48px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   pointer-events: none;
-  overflow: hidden;
   animation: fade-in-out 3s infinite; /* Metin animasyonu */
 }
 
@@ -125,23 +181,18 @@ nav ul li a:hover {
 
 /* Gizli metni başlangıçta saklayın */
 .hidden-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.7); /* Arkada yarı saydam karartma */
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;                /* Metin başlangıçta görünmez */
-  visibility: hidden;        /* Metin başlangıçta görünmez */
-  transition: opacity 0.3s, visibility 0.3s;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow: auto;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;                /* Metin başlangıçta görünmez */
+    visibility: hidden;        /* Metin başlangıçta görünmez */
+    transition: opacity 0.3s, visibility 0.3s;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
 }
 
 /* Fare görselin üzerine gelince ve tıklanınca görünür yapmak için */
@@ -192,15 +243,28 @@ nav ul li a:hover {
 /* Flexbox düzeni ile navigasyonun kaybolmasını engelleme */
 .main-menu__wrapper-inner {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Sağa dayalı hale getirmek için flex kullanıldı */
 }
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  margin-left: auto; /* Sağa dayalı hale getirmek için eklendi */
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  color: purple;
 }
 
 .image-slider {
