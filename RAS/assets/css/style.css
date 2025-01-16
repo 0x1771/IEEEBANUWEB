@@ -9,7 +9,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    /*align-items: center;            logoyu ortalıyo*/
+    align-items: center;          
     padding: 10px;
     background-color: #04000A;
     color: white;
@@ -49,4 +49,19 @@ footer {
         position: absolute;
         bottom: 0;
         width: 100%;
-    }
+}
+
+.main-menu__wrapper-inner {
+    display: flex;            
+    align-items: center;      
+    justify-content: flex-start; 
+    gap: 20px;                
+}
+
+.main-menu__wrapper-inner ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;                
+}
