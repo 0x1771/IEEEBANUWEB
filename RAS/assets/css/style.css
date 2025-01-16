@@ -272,7 +272,7 @@ nav ul li a:hover {
 .image-slider {
   position: relative;
   width: 100%; /* Görsellerin genişliği */
-  height: 150px; /* Görsellerin yüksekliği */
+  height: 200px; /* Görsellerin yüksekliği */
   overflow: hidden;
   background-color: #04000A;
   margin-top: 50px; /* Kapak görselinin 50px altında */
@@ -286,7 +286,7 @@ nav ul li a:hover {
 
 .image-track img {
   width: 100%; /* Görsellerin genişliği */
-  height: 150px; /* Görsellerin yüksekliği */
+  height: 200px; /* Görsellerin yüksekliği */
   object-fit: cover; /* Görsellerin orantılı olarak kesilmesini sağlar */
   display: block;
 }
