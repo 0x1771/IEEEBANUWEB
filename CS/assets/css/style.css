@@ -35,6 +35,9 @@ body{
 .ieee-color{
     color: #00629B;
 }
+.wie-color{
+  color: #772583;
+}
 
 
 
@@ -109,9 +112,13 @@ body{
   transform: translate(0, 5%);
 }
 
-.about-us-div{
+.section-content{
   position: relative;
   top: 70px;
 } 
+
+#activities{
+  height: 240vh;
+}
 
 

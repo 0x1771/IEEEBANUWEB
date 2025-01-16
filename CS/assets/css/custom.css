@@ -31,15 +31,18 @@
     background-color: rgba(0, 0, 0, 0.6); 
     z-index: 1; 
   }
+
   .btn-primary{
     background-color: #FFA300;
     color: black;
-    
+    border-color: black;
   }
+
 
   .btn-primary:hover{
     background-color:black;
     color: #FFA300;
+    border-color: #FFA300;
   }
 
   #carouselSlideOnly .carousel-item {
@@ -51,4 +54,7 @@
     width: 100vh;
   } 
 
+.card{
+  height: 100%;
+}
   
