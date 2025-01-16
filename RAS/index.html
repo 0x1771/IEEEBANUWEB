@@ -25,7 +25,6 @@
 </head>
 
 <body>
-    <header>
         <div class="page-wrapper">
             <header class="main-header">
                 <nav class="main-menu">
@@ -59,10 +58,34 @@
                 </nav>            
             </header>
         </div>
-    
+
+        <div class="image-container" onclick="toggleText()">
+            <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+            <div class="overlay-text">Nedir?</div>
+            <div class="hidden-text" id="popupText">
+              <!-- Bu metni istediğiniz gibi düzenleyebilirsiniz -->
+              IEEE RAS (Robotics and Automation Society), robotik ve otomasyon alanlarında çok çeşitli faaliyetlerde bulunan bir teknik komitedir. Bu komite, eğitim, uygulama, araştırma ve geliştirme çalışmalarını teşvik eder. Ayrıca, bu alanlarda inovatif projelerin geliştirilmesine öncülük eder.
+              <br><br>IEEE RAS, farklı disiplinler arası işbirliği yaparak, elektrik, elektronik, yazılım, bilgisayar ve mekatronik gibi birçok farklı alandaki uzmanları bir araya getirir. Bu sayede, multidisipliner bir yaklaşım benimser ve robotik ile otomasyon teknolojilerini daha geniş bir perspektiften ele alır.
+              <br><br>Bu teknik komite, endüstri ve teknoloji evrimi ile paralel olarak gelişir ve bu alanlardaki yenilikleri takip eder. Bu sayede, robotik ve otomasyonun hızla değişen dünyasında güncel kalır ve bu teknolojilerin ilerlemesine katkı sağlar.
+            </div>
+          </div>
+          
     <footer>
         <p>&copy; IEEE BANU adına 2024 yılında geliştirilmiştir.</p>
     </footer>
+
+    <script>
+        // Fare tıklaması ile metni açıp kapatmak isterseniz bu fonksiyonu kullanabilirsiniz
+        function toggleText() {
+          const popup = document.getElementById("popupText");
+          // Metin görünürse gizle, görünmezse göster
+          if (popup.style.opacity === "1") {
+            popup.style.opacity = "0";
+          } else {
+            popup.style.opacity = "1";
+          }
+        }
+      </script>
 </body>
 
 </html>
