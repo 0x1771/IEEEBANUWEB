@@ -44,7 +44,7 @@
 
   #carouselSlideOnly .carousel-item {
     position: relative;
-    height: 100vh; /* her slayt tam ekran */
+    height: 100vh; 
   }
 
   #carouselSlideOnly .carousel-innet{
