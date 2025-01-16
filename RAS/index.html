@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>IEEE BANU RAS</title>
-    <!-- Font Awesome CSS -->
+    <!-- CSS Dosyalarınızı Burada Dahil Edin -->
     <link rel="stylesheet" href="assets/css/font-awesome/all.min.css">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
-    <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="assets/css/owl-carousel/owl.carousel.min.css">
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="assets/css/swiper/swiper.min.css">
-    <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="assets/css/magnific-popup/magnific-popup.css">
-    <!-- Özel stil dosyası -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/snow.css">
     <link rel="preload" fetchpriority="high" as="image" href="assets/images/about/about-00.webp" type="image/webp">
     <link rel="shortcut icon" href="assets/images/1024.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/intro.css">
 </head>
-
 <body>
     <div class="page-wrapper">
         <header class="main-header">
@@ -34,59 +27,62 @@
                                 <a href="index.html"><img src="assets/images/raslogo.png" width="600px" alt=""></a>
                             </div>
                         </div>
-
                         <ul>
-                            <li>
-                                <a href="index.html">Anasayfa</a>
-                            </li>
-                            <li>
-                                <a href="about.html">Hakkında</a>
-                            </li>
-                            <li>
-                                <a href="event.html">Etkinlikler</a>
-                            </li>
-                            <li>
-                                <a href="project.html">Projeler</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">İletişim</a>
-                            </li>
+                            <li><a href="index.html">Anasayfa</a></li>
+                            <li><a href="about.html">Hakkında</a></li>
+                            <li><a href="event.html">Etkinlikler</a></li>
+                            <li><a href="project.html">Projeler</a></li>
+                            <li><a href="contact.html">İletişim</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-    
-
-        <div class="image-container" onclick="toggleText()">
-            <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
-            <div class="overlay-text">Nedir?</div>
-            <div class="hidden-text" id="popupText">
-                <!-- Bu metni istediğiniz gibi düzenleyebilirsiniz -->
-                IEEE RAS (Robotics and Automation Society), robotik ve otomasyon alanlarında çok çeşitli faaliyetlerde bulunan bir teknik komitedir. Bu komite, eğitim, uygulama, araştırma ve geliştirme çalışmalarını teşvik eder. Ayrıca, bu alanlarda inovatif projelerin geliştirilmesine öncülük eder.
-                <br><br>IEEE RAS, farklı disiplinler arası işbirliği yaparak, elektrik, elektronik, yazılım, bilgisayar ve mekatronik gibi birçok farklı alandaki uzmanları bir araya getirir. Bu sayede, multidisipliner bir yaklaşım benimser ve robotik ile otomasyon teknolojilerini daha geniş bir perspektiften ele alır.
-                <br><br>Bu teknik komite, endüstri ve teknoloji evrimi ile paralel olarak gelişir ve bu alanlardaki yenilikleri takip eder. Bu sayede, robotik ve otomasyonun hızla değişen dünyasında güncel kalır ve bu teknolojilerin ilerlemesine katkı sağlar.
+        <main class="main-content">
+            <div class="image-container" onclick="toggleText()">
+                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <div class="overlay-text">Nedir?</div>
+                <div class="hidden-text" id="popupText">
+                    <!-- Bu metni istediğiniz gibi düzenleyebilirsiniz -->
+                    IEEE RAS (Robotics and Automation Society), robotik ve otomasyon alanlarında çok çeşitli faaliyetlerde bulunan bir teknik komitedir. Bu komite, eğitim, uygulama, araştırma ve geliştirme çalışmalarını teşvik eder. Ayrıca, bu alanlarda inovatif projelerin geliştirilmesine öncülük eder.
+                    <br><br>IEEE RAS, farklı disiplinler arası işbirliği yaparak, elektrik, elektronik, yazılım, bilgisayar ve mekatronik gibi birçok farklı alandaki uzmanları bir araya getirir. Bu sayede, multidisipliner bir yaklaşım benimser ve robotik ile otomasyon teknolojilerini daha geniş bir perspektiften ele alır.
+                    <br><br>Bu teknik komite, endüstri ve teknoloji evrimi ile paralel olarak gelişir ve bu alanlardaki yenilikleri takip eder. Bu sayede, robotik ve otomasyonun hızla değişen dünyasında güncel kalır ve bu teknolojilerin ilerlemesine katkı sağlar.
+                </div>
             </div>
-        </div>
-
-        <div class="image-container" onclick="window.location.href='events.html'" style="margin-top: 50px;">
-            <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
-            <div class="overlay-text">Etkinliklerimiz</div>
-            <div class="click-text">Görmek İçin Tıkla!</div>
-        </div>
-
-        <div class="image-container" onclick="window.location.href='project.html'" style="margin-top: 50px;">
-            <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
-            <div class="overlay-text">Projelerimiz</div>
-            <div class="click-text">Görmek İçin Tıkla!</div>
-        </div>
+            <div class="image-container" onclick="window.location.href='event.html'" style="margin-top: 50px;">
+                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <div class="overlay-text">Etkinliklerimiz</div>
+                <div class="click-text">Görmek İçin Tıkla!</div>
+            </div>
+            <div class="image-container" onclick="window.location.href='project.html'" style="margin-top: 50px;">
+                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <div class="overlay-text">Projelerimiz</div>
+                <div class="click-text">Görmek İçin Tıkla!</div>
+            </div>
+            <div class="image-container" onclick="window.location.href='contact.html'" style="margin-top: 50px;">
+                <img src="assets/images/RAS_Nedir.png" alt="Örnek Görsel">
+                <div class="overlay-text">İletişim</div>
+                <div class="click-text">İletişime geçmek için tıkla!</div>
+            </div>
+        </main>
+        <footer>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#" onclick="scrollToTop()">Başa Dön</a></li>
+                    <li><a href="event.html">Etkinliklerimiz</a></li>
+                    <li><a href="project.html">Projelerimiz</a></li>
+                    <li><a href="contact.html">İletişime Geç</a></li>
+                </ul>
+            </nav>
+            <p>&copy; IEEE BANU adına 2024 yılında geliştirilmiştir.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; IEEE BANU adına 2024 yılında geliştirilmiştir.</p>
-    </footer>
-
     <script>
+        // Sayfanın en üstüne gitmek için fonksiyon
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
         // Fare tıklaması ile metni açıp kapatmak isterseniz bu fonksiyonu kullanabilirsiniz
         function toggleText() {
             const popup = document.getElementById("popupText");
@@ -101,5 +97,4 @@
         }
     </script>
 </body>
-
 </html>

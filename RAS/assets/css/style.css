@@ -1,3 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+footer {
+  background: #04000A;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
 body {
   margin: 0px;
   font-family: Arial, sans-serif;
@@ -40,16 +64,6 @@ nav ul li a:hover {
   color: purple;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #04000A;
-  color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
 .main-menu__wrapper-inner {
   display: flex;
   align-items: center;
@@ -81,7 +95,7 @@ footer {
   opacity: 0.3;
 }
 
-/* "Nedir?", "Etkinliklerimiz" ve "Projelerimiz" metni */
+/* "Nedir?", "Etkinliklerimiz", "Projelerimiz" ve "İletişim" metni */
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -96,7 +110,7 @@ footer {
   animation: fade-in-out 3s infinite; /* Metin animasyonu */
 }
 
-/* "Görmek İçin Tıkla!" metni */
+/* "Görmek İçin Tıkla!" ve "İletişime geçmek için tıkla!" metni */
 .click-text {
   position: absolute;
   bottom: 10px;
@@ -153,23 +167,24 @@ footer {
   }
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #04000A;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-}
-
-.page-wrapper {
-  min-height: 100%;
+/* Footer navigasyonu için stil */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
-.main-content {
-  flex: 1; /* İçeriğin büyümesini sağlar */
+.footer-nav ul li {
+  display: inline;
 }
 
+.footer-nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+  text-decoration: underline;
+}
