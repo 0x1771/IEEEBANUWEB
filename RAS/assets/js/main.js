@@ -1,4 +1,3 @@
-// Animasyonu durdur ve tıklama olayını işle
 document.addEventListener('DOMContentLoaded', function() {
     const imageSlider = document.getElementById('imageSlider');
     const imageTrack = imageSlider.querySelector('.image-track');
@@ -28,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Toplam animasyon süresini ayarlayın
-    const totalHeight = imageTrack.scrollHeight / 2;
-    const animationDuration = totalHeight / 50; // 50px/s hızında kayar
+    const totalWidth = imageTrack.scrollWidth / 2;
+    const animationDuration = totalWidth / 50; // 50px/s hızında kayar
 
     // CSS animasyon süresini ayarlayın
     imageTrack.style.animationDuration = `${animationDuration}s`;

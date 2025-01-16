@@ -1,3 +1,4 @@
+/* Genel stiller */
 html, body {
   height: 100%;
   margin: 0;
@@ -15,7 +16,8 @@ html, body {
 .cover-image {
   position: relative;
   width: 100%;
-  height: 300px; /* Yükseklik ayarı, ihtiyaç doğrultusunda değiştirilebilir */
+  height: 600px; /* Kapak görselinin daha büyük olması için yüksekliği arttırdık */
+  margin-top: 0; /* Kapak görselinin header ile arasında boşluk bırakmamak için */
 }
 
 .cover-image img {
@@ -27,18 +29,18 @@ html, body {
 
 .cover-text {
   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .main-content {
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 .main-header {
@@ -75,8 +77,8 @@ body {
 
 nav ul {
   list-style: none;
-  margin: 0;    /* Düzenleme yapıldı */
-  padding: 0;   /* Düzenleme yapıldı */
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 20px;
 }
@@ -124,8 +126,8 @@ nav ul li a:hover {
   margin: 20px auto;       /* Ortalamak için margin ayarı */
   cursor: pointer;         /* Fare ikonu tıklanabilir olduğunu belli eder */
   border: 5px solid purple;
-  aspect-ratio: 4 / 1;      /* 3 genişlik, 2 yükseklik oranı */
-  height: auto;             /* Yüksekliği otomatik olarak ayarla */
+  aspect-ratio: 4 / 1;     /* 3 genişlik, 2 yükseklik oranı */
+  height: auto;            /* Yüksekliği otomatik olarak ayarla */
 }
 
 /* Görselin kendisi */
@@ -142,7 +144,7 @@ nav ul li a:hover {
 
 /* Metin ve diğer içeriğin bulunduğu div */
 .image-container .content {
-  flex: 2;                 /* 2/3 genişlik */
+  flex: 1;                 /* 2/3 genişlik */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,7 +153,6 @@ nav ul li a:hover {
   padding: 20px;
   text-align: center;
 }
-
 
 /* "Nedir?", "Etkinliklerimiz", "Projelerimiz" ve "İletişim" metni */
 .overlay-text {
@@ -183,17 +184,17 @@ nav ul li a:hover {
 /* Gizli metni başlangıçta saklayın */
 .hidden-text {
   background-color: rgba(0, 0, 0, 0.7); /* Arkada yarı saydam karartma */
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;                /* Metin başlangıçta görünmez */
-    visibility: hidden;        /* Metin başlangıçta görünmez */
-    transition: opacity 0.3s, visibility 0.3s;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;                /* Metin başlangıçta görünmez */
+  visibility: hidden;        /* Metin başlangıçta görünmez */
+  transition: opacity 0.3s, visibility 0.3s;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 /* Fare görselin üzerine gelince ve tıklanınca görünür yapmak için */
@@ -269,25 +270,22 @@ nav ul li a:hover {
 }
 
 .image-slider {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px; /* Görsellerin genişliği */
-  height: 100vh;
+  position: relative;
+  width: 100%; /* Görsellerin genişliği */
+  height: 150px; /* Görsellerin yüksekliği */
   overflow: hidden;
   background-color: #04000A;
-  z-index: 0; /* İçeriğin altında kalmasını sağlamak için z-index */
+  margin-top: 50px; /* Kapak görselinin 50px altında */
 }
 
 .image-track {
   display: flex;
-  flex-direction: column;
   gap: 10px; /* Görseller arasındaki boşluk */
   animation: slide infinite linear;
 }
 
 .image-track img {
-  width: 100%;
+  width: 100%; /* Görsellerin genişliği */
   height: 150px; /* Görsellerin yüksekliği */
   object-fit: cover; /* Görsellerin orantılı olarak kesilmesini sağlar */
   display: block;
@@ -295,10 +293,10 @@ nav ul li a:hover {
 
 @keyframes slide {
   0% {
-      transform: translateY(0);
+      transform: translateX(0);
   }
   100% {
-      transform: translateY(-50%); /* Görsellerin toplam yüksekliğine göre ayarlayın */
+      transform: translateX(-100%); /* Görsellerin toplam genişliğine göre ayarlayın */
   }
 }
 
