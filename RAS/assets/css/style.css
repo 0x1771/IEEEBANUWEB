@@ -1,156 +1,175 @@
-
-
 body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
-    background-color: #04000A;
+  margin: 0px;
+  font-family: Arial, sans-serif;
+  background-color: #04000A;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;          
-    padding: 10px;
-    background-color: #04000A;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #04000A;
+  color: white;
 }
 
 .logo img {
-    height: 50px;
+  height: 50px;
 }
 
 nav ul {
-    list-style: none;     
-    margin: 10px;            
-    padding: 10px;         
-    display: flex;       
-    justify-content: flex; 
-    gap: 20px;              
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex;
+  gap: 20px;
 }
 
 nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: purple; }
+  color: purple;
+}
 
 footer {
-        text-align: center;
-        padding: 20px;
-        background: #04000A;
-        color: #ffffff;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #04000A;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .main-menu__wrapper-inner {
-    display: flex;            
-    align-items: center;      
-    justify-content: flex-start; 
-    gap: 20px;                
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .main-menu__wrapper-inner ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 20px;                
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
 }
 
 .image-container {
-    position: relative;         /* Metinleri üst üste getirmek için relative konum */
-    width: 50%;                 /* Görselin genişliği */
-    margin: 0 auto;             /* Ortalamak isterseniz */
-    cursor: pointer;            /* Fare ikonu tıklanabilir olduğunu belli eder */
-    border: 5px solid purple;
-    animation: grow-shrink 3s infinite; /* Görsel animasyonu */
-  }
+  position: relative;         /* Metinleri üst üste getirmek için relative konum */
+  width: 50%;                 /* Görselin genişliği */
+  margin: 20px auto;          /* Ortalamak isterseniz */
+  cursor: pointer;            /* Fare ikonu tıklanabilir olduğunu belli eder */
+  border: 5px solid purple;
+}
 
-  /* Görselin kendisi */
-  .image-container img {
-    display: block;
-    width: 100%;
-    height: 30%;
-    opacity: 0.3;
-  }
+/* Görselin kendisi */
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;               /* Yüksekliği otomatik olarak ayarla */
+  opacity: 0.3;
+}
 
-  /* "Nedir?" metni */
-  .overlay-text {
-    position: absolute;       
-    top: 50%;                 
-    left: 50%;                
-    transform: translate(-50%, -50%);
-    color: white;            
-    font-size: 48px;         
-    font-weight: bold;
-    text-align: center;
-    pointer-events: none;
-    overflow: hidden;  
-    animation: fade-in-out 3s infinite; /* Metin animasyonu */ 
-  }
+/* "Nedir?", "Etkinliklerimiz" ve "Projelerimiz" metni */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none;
+  overflow: hidden;
+  animation: fade-in-out 3s infinite; /* Metin animasyonu */
+}
 
-  /* Gizli metni başlangıçta saklayın */
-  .hidden-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Arkada yarı saydam karartma */ 
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;                /* Metin başlangıçta görünmez */
-    transition: opacity 0.3s;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: auto; 
-  }
+/* "Görmek İçin Tıkla!" metni */
+.click-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 16px;
+  text-decoration: underline;
+  text-align: center;
+  pointer-events: none;
+}
 
-  /* Fare görselin üzerine gelince ve tıklanınca görünür yapmak için */
-  .image-container:hover .hidden-text,
-  .image-container:active .hidden-text {
-    opacity: 1;
-  }
+/* Gizli metni başlangıçta saklayın */
+.hidden-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Arkada yarı saydam karartma */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;                /* Metin başlangıçta görünmez */
+  visibility: hidden;        /* Metin başlangıçta görünmez */
+  transition: opacity 0.3s, visibility 0.3s;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
 
-  /* Fare görselin üzerine gelince ve tıklanınca animasyonları durdur */
-  .image-container:hover,
-  .image-container:active {
-    animation-play-state: paused; /* Görsel animasyonunu durdur */
-  }
+/* Fare görselin üzerine gelince ve tıklanınca görünür yapmak için */
+.image-container:hover .hidden-text,
+.image-container:active .hidden-text {
+  opacity: 1;
+  visibility: visible;
+}
 
-  .image-container:hover .overlay-text,
-  .image-container:active .overlay-text {
-    animation-play-state: paused; /* Metin animasyonunu durdur */
-  }
+/* Fare görselin üzerine gelince ve tıklanınca animasyonları durdur */
+.image-container:hover .overlay-text,
+.image-container:active .overlay-text {
+  animation-play-state: paused; /* Metin animasyonunu durdur */
+}
 
-  /* Görsel animasyonu */
-  @keyframes grow-shrink {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-  }
-
-  /* Metin animasyonu */
-  @keyframes fade-in-out {
-    0%, 100% {
+/* Metin animasyonu */
+@keyframes fade-in-out {
+  0%, 100% {
       opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
   }
+  50% {
+      opacity: 0.5;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #04000A;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* İçeriğin büyümesini sağlar */
+}
+

@@ -96,5 +96,18 @@
     <p>&copy; IEEE BANU adına 2024 yılında geliştirilmiştir.</p>
 </footer>
 
+<script>
+    // Fare tıklaması ile metni açıp kapatmak isterseniz bu fonksiyonu kullanabilirsiniz
+    function toggleText() {
+      const popup = document.getElementById("popupText");
+      // Metin görünürse gizle, görünmezse göster
+      if (popup.style.opacity === "1") {
+        popup.style.opacity = "0";
+      } else {
+        popup.style.opacity = "1";
+      }
+    }
+  </script>
+
 </body>
 </html>
