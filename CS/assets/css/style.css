@@ -117,10 +117,12 @@ body{
   top: 70px;
 } 
 
-#activities{
-  height: 240vh;
-}
 
 #contact-us{
   padding-top: 70px;
+}
+
+.footer{
+  position: flex;
+  bottom: 0;
 }
