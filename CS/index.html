@@ -3,131 +3,364 @@
 
 <head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IEEE BANU CS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE BANU CS</title>
 
-    <!-- Icons & Meta -->
-    <link rel="icon" type="image/png" href="assets/images/1024.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <meta name="description" content="IEEE BANU Computer Society komitesine ait internet sitesi. " />
-    <meta name="author" content="IEEE BANU">
-  
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-   
-    <!--CSS-->
+  <!-- Icons & Meta -->
+  <link rel="icon" type="image/png" href="assets/images/1024.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <meta name="description" content="IEEE BANU Computer Society komitesine ait internet sitesi. " />
+  <meta name="author" content="IEEE BANU">
 
-    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/animatecss/animate.min.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
- 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+  <!--CSS-->
+
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/animatecss/animate.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons/font/bootstrap-icons.min.css">
 
 </head>
 
+
+
 <body>
-    
-    <!--NavBar Start-->
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top  "> <!--Duruma gore "sticky-top" kullan-->
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="assets/images/IEEE BANU CS LOGO.png" class="img-fluid" alt="IEEE BANU CS LOGO" width="300">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Hakkımızda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Projelerimiz</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Etkinliklerimiz</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">İletişim</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    <!--NavBar End-->
 
-    <!--Carousel Start-->
-    <div class="d-flex justify-content-center">
-    <div id="carouselSlideOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"> <!--Hız test için yüksek, azaltılacak-->
-        <div class="carousel-inner">
-             <!--Resimlerin boyutunun optimizasyon için küçülmesi lazım, boyut oranlarına dikkat hepsi aynı olmak zorunda!!!!!!!!-->
-          <div class="carousel-item active main-carousel">
-            <img src="assets/images/Main Carousel/Algo2023-1.jpg" class="d-block w-100" alt="AlgoSprint">
-          </div>
-          <div class="carousel-item main-carousel">
-            <img src="assets/images/Main Carousel/Algo2024-1.jpg" class="d-block w-100" alt="AlgoSprint">
-          </div>
-          <div class="carousel-item main-carousel">
-            <img src="assets/images/Main Carousel/Algo2024-2.JPG" class="d-block w-100" alt="AlgoSprint">
-          </div>
-          <div class="carousel-item main-carousel">
-            <img src="assets/images/Main Carousel/Insight2023-1.jpg" class="d-block w-100" alt="Insight360">
-          </div>
-          <div class="carousel-item main-carousel">
-            <img src="assets/images/Main Carousel/TEYK2024-1.jpg" class="d-block w-100" alt="TEYK">
-          </div>
-        </div>
-      </div>
-      <div class="carousel-content">
-        <div class="carousel-content-header">
-          <p class="animate__animated animate__zoomInLeft h1">IEEE BANU</p>
-          <p class="animate__animated animate__zoomInRight animate__delay-1s h1 text-warning">Computer Society</p>
-        </div>
-        <div class="carousel-content-text">
-          <p class="animate__animated animate__fadeInUp animate__delay-2s">Kodla, Ayıkla, Yayınla!</p>
-        </div>
-      </div>
-      <a href="#bottom-content">
-        <button class="carousel-content-button">
-          Keşfetmeye Başla
-        </button>
+
+
+  <!--NavBar Start-->
+
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" id="navbar"> <!--Duruma gore "sticky-top" kullan-->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="assets/images/IEEE BANU CS LOGO.png" class="img-fluid" alt="IEEE BANU CS LOGO" width="400">
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#start">Giriş</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">Hakkımızda</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#projects">Projelerimiz</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#activities">Etkinliklerimiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Bize Ulaşın!</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!--Carousel END-->
+  <!--NavBar End-->
 
-    <!--Bottom Content Start-->
 
-    <section id="bottom-content">
-      <div class="upper-content">
-        <h1 class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, debitis!</h1>
+
+  <div data-bs-spy="scroll" data-bs-target="#navbar">
+
+
+
+    <!--Start End-->
+
+    <section class="main-section" id="start">
+      <div class="d-flex justify-content-center">
+        <div id="carouselSlideOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <!--Hız test için yüksek, azaltılacak-->
+          <div class="carousel-inner">
+            <!--Resimlerin boyutunun optimizasyon için küçülmesi lazım, boyut oranlarına dikkat hepsi aynı olmak zorunda!!!!!!!!-->
+            <div class="carousel-item active main-carousel">
+              <img src="assets/images/Main Carousel/Algo2023-1.jpg" class="d-block w-100" alt="AlgoSprint">
+            </div>
+            <div class="carousel-item main-carousel">
+              <img src="assets/images/Main Carousel/Algo2024-1.jpg" class="d-block w-100" alt="AlgoSprint">
+            </div>
+            <div class="carousel-item main-carousel">
+              <img src="assets/images/Main Carousel/Algo2024-2.JPG" class="d-block w-100" alt="AlgoSprint">
+            </div>
+            <div class="carousel-item main-carousel">
+              <img src="assets/images/Main Carousel/Insight2023-1.jpg" class="d-block w-100" alt="Insight360">
+            </div>
+            <div class="carousel-item main-carousel">
+              <img src="assets/images/Main Carousel/TEYK2024-1.jpg" class="d-block w-100" alt="TEYK">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-content">
+          <div class="carousel-content-header">
+            <p class="animate__animated animate__zoomInLeft h1">IEEE BANU</p>
+            <p class="animate__animated animate__zoomInRight animate__delay-1s h1 cs-color">Computer Society</p>
+          </div>
+          <div class="carousel-content-text">
+            <p class="animate__animated animate__fadeInUp animate__delay-2s">Kodla, Ayıkla, Yayınla!</p>
+          </div>
+        </div>
+        <a href="#about-us">
+          <button class="carousel-content-button">
+            Keşfetmeye Başla
+          </button>
+        </a>
       </div>
     </section>
 
+    <!--Start End-->
 
 
 
+    <!--About Us Start-->
+
+    <section class="main-section" id="about-us">
+      <div class="section-content container text-center vh-100">
+        <div class="row justify-content-start">
+          <div class="col align-self-start col-12 col-md-4">
+            <p class="h1 cs-color">Biz Kimiz?</p>
+            <p class="text-light">
+              IEEE BANU komiteleri arasında en çok kişiye hitap eden <span class="cs-color">Computer Society</span>
+              kısaca "<span class="cs-color">CS</span>";
+              programlama, yapay zeka gibi alanlarda eğitimler ve atölyeler yapar; yarışmalar,
+              konferanslar ve proje çalışmalarıyla öğrencilere hem teknik bilgi hem de iş dünyası bağlantıları
+              kazandırır. </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col align-self-center col-12 col-md-4">
+            <p class="h1 cs-color">Kimler Yer Alabilir?</p>
+            <p class="text-light">
+              Yazılım ve bilgisayar bilimleri alanında pratik ve teorik becerilerini geliştirmek,
+              aynı zamanda ekip çalışması ve kriz yönetimini uygulamalı olarak deneyimlemek isteyen herkes katılabilir.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col align-self-end col-12 col-md-4">
+            <p class="h1 cs-color">Nasıl Katılabilirim?</p>
+            <p class="text-light">
+              Topluluğumuza katılmak için web sitemiz veya <a class="link-warning"
+                href="https://linktr.ee/ieeebanu">sosyal medya</a> hesaplarımız üzerinden duyuruları takip edebilir,
+              etkinliklerimize katılarak başvuru formunu doldurabilirsiniz.
+              Ekibimize dahil olup projelerde aktif rol alarak hem teknik hem de sosyal açıdan kendinizi geliştirme
+              fırsatı yakalayabilirsiniz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--About Us End-->
 
 
 
+    <!--Projects Start-->
+
+    <!-- <section id="projects" class="main-section">
+      <div>
+
+      </div>
+    </section> -->
+
+    <!--Projects Start-->
 
 
 
+    <!--Activites Start-->
+
+    <section id="activities" class="main-section">
+      <div class="section-content">
+        <h2 class="h1 cs-color text-center">Etkinliklerimiz</h2>
+        <div class="container my-4">
+          
+          <!-- 1. Satır: Sol - Boş - Sağ -->
+          <div class="row mb-4">
+            <!-- Sol üst kart -->
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+              <div class="card" >
+                <img src="assets/images/Activities/Algo.jpg" class="card-img-top img-fluid" alt="AlgoSprint">
+                <div class="card-body">
+                  <h5 class="card-title">AlgoSprint</h5>
+                  <p class="card-text">Yarışmacıların belirlenen zamanda büyük ödüller için birbirleriyle programlama yeneklerini gösterdikleri algoritma yarışması. </p>
+                  <a href="https://www.instagram.com/p/DCzWTM5NkAi/" target="_blank" class="btn btn-primary">Detaylı Bilgi</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col d-none d-md-block"></div>
+    
+            <!-- Sağ üst kart -->
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+              <div class="card" >
+                <img src="assets/images/Activities/CodeNight.jpg" class="card-img-top img-fluid" alt="CodeNight">
+                <div class="card-body">
+                  <h5 class="card-title">Code Night's</h5>
+                  <p class="card-text">Katılımcılar gece yarısından gün doğumuna kadar ister kendi başlarına isterse bir ekip olarak kodlama yaparlar.</p>
+                  <a href="https://www.instagram.com/p/DCzWTM5NkAi/" target="_blank" class="btn btn-primary">Detaylı Bilgi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- 2. Satır: Boş - Orta Kart - Boş -->
+          <div class="row mb-4">
+            <!-- Sol sütun (boş) -->
+            <div class="col d-none d-md-block"></div>
+    
+            <!-- Ortadaki kart -->
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+              <div class="card" >
+                <img src="assets/images/Activities/Insight.jpg" class="card-img-top img-fluid" alt="Insight360">
+                <div class="card-body">
+                  <h5 class="card-title">Insight360</h5>
+                  <p class="card-text">Bu zirvede sektörün önde gelen mühendisleri <span class="wie-color">WIE</span> komitemiz iş birliğinde geleceğin mühendislerine tecrübelerini paylaşıyor, sorularını cevaplandırıyor.</p>
+                  <a href="https://www.instagram.com/p/C7HBKlNIfvk/?img_index=1" target="_blank" class="btn btn-primary">Detaylı Bilgi</a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Sağ sütun (boş) -->
+            <div class="col d-none d-md-block"></div>
+          </div>
+    
+          <!-- 3. Satır: Sol - Boş - Sağ -->
+          <div class="row">
+            <!-- Sol alt kart -->
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3 mb-md-0">
+              <div class="card" >
+                <img src="assets/images/Activities/TalCS.jpg" class="card-img-top img-fluid" alt="TalCS">
+                <div class="card-body">
+                  <h5 class="card-title">TalCS</h5>
+                  <p class="card-text">Alanında uzman mühendisler katılımcılara uygulamalı olarak eğitimler veriyor, sektör standartları ile öğrencileri tanıştırıyor.</p>
+                  <a href="https://www.instagram.com/p/DAyZEDus0gu/" target="_blank" class="btn btn-primary">Detaylı Bilgi</a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Orta sütun (boş) -->
+            <div class="col d-none d-md-block"></div>
+    
+            <!-- Sağ alt kart -->
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+              <div class="card">
+                <img src="assets/images/Activities/teyk1_1.jpg" class="card-img-top img-fluid" alt="Teknik Ekip Yetiştirme Kampları">
+                <div class="card-body">
+                  <h5 class="card-title">Teknik Ekip Yetiştirme Kampları (TEYK)</h5>
+                  <p class="card-text">Öğrenci veya yeni mezunlar kendini geliştirmiş öğretmenler katılımcıların önceden belirlediği alanlarda interaktif eğitimler veriyor. </p>
+                  <a href="https://www.instagram.com/p/DBiws4JMzxa/" target="_blank" class="btn btn-primary">Detaylı Bilgi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+
+    <!--Activites End-->
 
 
 
+    <!--Contact Us Start-->
+    <section id="contact-us" class="main-section d-flex flex-column min-vh-100">
+  
+      
+      <div class="flex-grow-1">
+        <div class="container text-center text-white mb-4">
+          <h2>Bize Ulaşın!</h2>
+          <p>
+            Bize katılmak mı istiyorsunuz, sorularınız mı var, iş birliği mi düşünüyorsunuz 
+            vakit kaybetmeden hemen bize ulaşın!
+          </p>
+        </div>
+        
+        <div class="container">
+          <div class="row bg-white rounded shadow mx-auto" style="max-width: 1000px;">
 
+            <div class="col-md-7 p-4">
+              <h4 class="text-dark mb-3">Bize mesaj gönder.</h4>
+              <form>
+                <!-- İsim Soy İsim -->
+                <div class="row g-3 mb-3">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="İsim" />
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Soy İsim" />
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Email " />
+                </div>
+                <!-- Telefon -->
+                <div class="mb-3">
+                  <input type="tel" class="form-control" placeholder="Telefon Numarası" />
+                </div>
+                <!-- Mesaj -->
+                <div class="mb-3">
+                  <textarea class="form-control" rows="4" placeholder="Mesaj"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+              </form>
+            </div>
+            
 
+            <div class="col-md-5 bg-warning text-white p-4 d-flex flex-column justify-content-center">
+              <h4 class="mb-3">Bilgilerimiz</h4>
+              <address class="mb-2">
+                Bandırma Onyedi Eylül Üniversitesi Merkez Yerleşkesi,<br>
+                10200 Bandırma,<br>
+                Balıkesir
+              </address>
+              <div class="mt-3">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/ieeebanucs/" class="text-white fs-5 me-3" target="_blank">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="www.linkedin.com/company/ieee-banu-ogrenci-kolu" class="text-white fs-5" target="_blank">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <footer class="bg-dark text-white p-3">
+        <div class="container flex-wrap d-flex justify-content-between align-items-center">
 
-<script src="assets/js/bootstrap/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
+         <a href="#start"> <img src="assets/images/IEEE BANU CS LOGO.png" 
+               alt="IEEE BANU CS LOGO"
+               style="max-width: 350px;"
+               class="img-fluid">
+         </a>
+    
+          <p class="mb-0">
+            2025 yılında IEEE BANU tarafından yapılmıştır.
+          </p>
+        </div>
+      </footer>
+
+    </section>
+    
+    <!--Contact Us End-->
+
+  </div>
+  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>

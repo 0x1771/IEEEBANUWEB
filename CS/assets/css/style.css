@@ -1,10 +1,19 @@
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;  
+  scroll-snap-type: y mandatory; 
+  margin: 0; 
+  padding: 0;
+  height: 100%;
+}
+
+.main-section{
+  scroll-snap-align: start; 
+  min-height: 100vh;        
 }
 
 body{
     font-family: 'Russo One', serif;
-    background-color: #DBD3D3;
+    background-color: black;
 }
 .carousel-content {
     position: absolute;
@@ -25,6 +34,9 @@ body{
 
 .ieee-color{
     color: #00629B;
+}
+.wie-color{
+  color: #772583;
 }
 
 
@@ -100,5 +112,17 @@ body{
   transform: translate(0, 5%);
 }
 
+.section-content{
+  position: relative;
+  top: 70px;
+} 
 
 
+#contact-us{
+  padding-top: 70px;
+}
+
+.footer{
+  position: flex;
+  bottom: 0;
+}

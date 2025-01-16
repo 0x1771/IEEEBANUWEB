@@ -31,22 +31,40 @@
     background-color: rgba(0, 0, 0, 0.6); 
     z-index: 1; 
   }
+
   .btn-primary{
     background-color: #FFA300;
     color: black;
-    
+    border-color: black;
   }
+
 
   .btn-primary:hover{
     background-color:black;
     color: #FFA300;
+    border-color: #FFA300;
   }
 
   #carouselSlideOnly .carousel-item {
     position: relative;
-    height: 100vh; /* her slayt tam ekran */
+    height: 100vh; 
   }
 
   #carouselSlideOnly .carousel-innet{
     width: 100vh;
   } 
+
+.card{
+  height: 100%;
+}
+  
+.card-body {
+  display: flex;         
+  flex-direction: column; 
+}
+
+
+.card-body .btn {
+  margin-top: auto;       
+  align-self: flex-start; 
+}
